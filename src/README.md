@@ -1,6 +1,8 @@
 # Discovery
 
-> Discover the world of microcontrollers through [Rust]!
+<!-- > Discover the world of microcontrollers through [Rust]! -->
+
+> [Rust]でマイクロコントローラの世界を楽しもう！
 
 [Rust]: https://www.rust-lang.org/en-US/
 
