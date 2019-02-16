@@ -1,4 +1,6 @@
-# Meet your hardware
+<!-- # Meet your hardware -->
+
+# ハードウェアとの出会い
 
 Let's get familiar with the hardware we'll be working with.
 
