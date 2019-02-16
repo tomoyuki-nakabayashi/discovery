@@ -1,4 +1,6 @@
-# Verify the installation
+<!-- # Verify the installation -->
+
+# インストールの確認
 
 Let's verify that all the tools were installed correctly.
 
