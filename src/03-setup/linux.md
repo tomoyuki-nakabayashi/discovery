@@ -1,6 +1,8 @@
 # Linux
 
-Here are the installation commands for a few Linux distributions.
+<!-- Here are the installation commands for a few Linux distributions. -->
+
+いくつかのLinuxディストリビューションのインストールコマンドを示します。
 
 ## REQUIRED packages
 
