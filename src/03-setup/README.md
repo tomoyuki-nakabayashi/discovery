@@ -1,4 +1,6 @@
-# Setting up a development environment
+<!-- # Setting up a development environment -->
+
+# 開発環境の構築
 
 Dealing with microcontrollers involves several tools as we'll be dealing with an architecture
 different than your laptop's and we'll have to run and debug programs on a "remote" device.
