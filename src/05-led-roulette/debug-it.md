@@ -1,4 +1,6 @@
-# Debug it
+<!-- # Debug it -->
+
+# デバッグ
 
 We are already inside a debugging session so let's debug our program.
 
