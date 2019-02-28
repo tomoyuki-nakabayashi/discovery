@@ -1,4 +1,6 @@
-# The `Led` and `Delay` abstractions
+<!-- # The `Led` and `Delay` abstractions -->
+
+# `Led`と`Delay`の抽象化
 
 Now, I'm going to introduce two high level abstractions that we'll use to implement the LED roulette
 application.
