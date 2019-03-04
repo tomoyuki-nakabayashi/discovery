@@ -4,6 +4,10 @@
 > on the STM32F3DISCOVERY, which is required to use the ITM and the `iprint!` macros shown below, is
 > **not** soldered even though the [User Manual][] (page 21) says that it **should be**.
 
+> **注意** [ユーザーマニュアル][]（page 21）ではんだ付け**しなければならない**と書いてあるにも関わらず、
+> STM32F3DISCOVERY上のSB10「はんだブリッジ」（ボードの裏を見て下さい）がはんだ付け**されていない**、と複数の読者が報告しています。
+> これは、後ほど出てくるITMと`iprint!`マクロを使うために必要です。
+
 > **TL;DR** You have two options to fix this: Either **solder** the solder bridge SB10 or connect a
 > wire between SWO and PB3 as shown in the picture below.
 
