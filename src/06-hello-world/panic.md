@@ -2,6 +2,8 @@
 
 The `panic!` macro also sends its output to the ITM!
 
+`panic!`マクロも出力をITMに送信します！
+
 Change the `main` function to look like this:
 
 ``` rust
