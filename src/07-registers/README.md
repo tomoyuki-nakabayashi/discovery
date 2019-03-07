@@ -1,4 +1,6 @@
-# Registers
+<!-- # Registers -->
+
+# レジスタ
 
 It's time to explore what the `Led` API does under the hood.
 
