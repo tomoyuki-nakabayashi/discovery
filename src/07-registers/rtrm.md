@@ -1,4 +1,6 @@
-# RTRM: Reading The Reference Manual
+<!-- # RTRM: Reading The Reference Manual -->
+
+# RTRM: リファレンスマニュアルを読む
 
 I mentioned that the microcontroller has several pins. For convenience, these pins are grouped in
 *ports* of 16 pins. Each port is named with a letter: Port A, Port B, etc. and the pins within each
