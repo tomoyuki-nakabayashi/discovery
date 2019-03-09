@@ -1,4 +1,6 @@
-# `0xBAAAAAAD` address
+<!-- # `0xBAAAAAAD` address -->
+
+# `0xBAAAAAAD`番地
 
 Not all the peripheral memory can be accessed. Look at this program.
 
