@@ -1,4 +1,6 @@
-# (mis)Optimization
+<!-- # (mis)Optimization -->
+
+# （誤った）最適化
 
 Reads/writes to registers are quite special. I may even dare to say that they are embodiment of side
 effects. In the previous example we wrote four different values to the same register. If you didn't
