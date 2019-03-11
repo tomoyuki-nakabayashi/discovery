@@ -1,4 +1,6 @@
-# Spooky action at a distance
+<!-- # Spooky action at a distance -->
+
+# 異なる場所での不気味な動作
 
 `BSRR` is not the only register that can control the pins of Port E. The `ODR` register also lets
 you change the value of the pins. Furthermore, `ODR` also lets you retrieve the current output
