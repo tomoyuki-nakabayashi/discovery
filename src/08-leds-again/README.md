@@ -1,4 +1,6 @@
-# LEDs, again
+<!-- # LEDs, again -->
+
+# LED、再び
 
 In the last section, I gave you *initialized* (configured) peripherals (I initialized them in
 `aux7::init`). That's why just writing to `BSRR` was enough to control the LEDs. But, peripherals
