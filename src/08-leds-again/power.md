@@ -1,4 +1,6 @@
-# Power
+<!-- # Power -->
+
+# 電源
 
 Turns out that, to save power, most peripherals start in a powered off state -- that's their state
 right after the microcontroller boots.
