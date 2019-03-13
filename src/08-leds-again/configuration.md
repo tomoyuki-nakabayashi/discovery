@@ -1,4 +1,6 @@
-# Configuration
+<!-- # Configuration -->
+
+# 設定
 
 After turning on the GPIOE peripheral. The peripheral still needs to be configured. In this case, we
 want the pins to be configured as digital *outputs* so they can drive the LEDs; by default, most
