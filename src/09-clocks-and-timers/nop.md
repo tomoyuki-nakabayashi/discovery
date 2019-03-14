@@ -1,8 +1,13 @@
 # NOP
 
+<!-- 
 If in the previous section you compiled the program in release mode and actually looked at the
 disassembly, you probably noticed that the `delay` function is optimized away and never gets called
 from within `main`.
+ -->
+
+前のセクションで、プログラムをリリースモードでコンパイルし、逆アセンブルした結果を実際に見ると、
+`delay`関数が最適化されて`main`から呼び出せれないことに気づくでしょう。
 
 LLVM decided that the function wasn't doing anything worthwhile and just removed it.
 
