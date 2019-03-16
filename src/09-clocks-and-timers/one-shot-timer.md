@@ -1,4 +1,6 @@
-# One-shot timer
+<!-- # One-shot timer -->
+
+# ワンショットタイマ
 
 I hope that, by now, I have convinced you that `for` loop delays are a poor way to implement delays.
 
