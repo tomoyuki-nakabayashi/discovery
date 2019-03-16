@@ -1,4 +1,6 @@
-# Initialization
+<!-- # Initialization -->
+
+# 初期化
 
 As with every other peripheral, we'll have to initialize this timer before we can use it. And just
 as in the previous section, initialization is going to involve two steps: powering up the timer and
