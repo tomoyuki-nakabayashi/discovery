@@ -1,4 +1,6 @@
-# Putting it all together
+<!-- # Putting it all together -->
+
+# 全てをまとめる
 
 ``` rust
 #![no_main]
