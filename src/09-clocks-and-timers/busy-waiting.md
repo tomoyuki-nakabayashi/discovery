@@ -1,4 +1,6 @@
-# Busy waiting
+<!-- # Busy waiting -->
+
+# ビジーウェイト
 
 The timer should now be properly initialized. All that's left is to implement the `delay` function
 using the timer.
