@@ -1,4 +1,6 @@
-# Serial communication
+<!-- # Serial communication -->
+
+# シリアル通信
 
 <a href="https://en.wikipedia.org/wiki/File:Serial_port.jpg">
 <p align="center">
