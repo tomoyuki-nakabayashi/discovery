@@ -1,4 +1,6 @@
-# *nix tooling
+<!-- # *nix tooling -->
+
+# *nixのツール
 
 Connect the serial module to your laptop and let's find out what name the OS assigned to it.
 
