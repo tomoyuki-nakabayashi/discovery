@@ -1,4 +1,6 @@
-# Windows tooling
+<!-- # Windows tooling -->
+
+# Windowsのツール
 
 Before plugging the Serial module, run the following command on the terminal:
 
