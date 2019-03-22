@@ -1,8 +1,13 @@
 # USART
 
+<!-- 
 The microcontroller has a peripheral called USART, which stands for Universal
 Synchronous/Asynchronous Receiver/Transmitter. This peripheral can be configured to work with
 several communication protocols like the serial communication protocol.
+ -->
+
+マイクロコントローラは、USART（Universal Synchronous/Asynchronous Receiver/Transmitter）と呼ばれるペリフェラルを持っています。
+このペリフェラルは、シリアル通信プロトコルのようないくつかの通信プロトコルで動作するように設定できます。
 
 Throughout this chapter, we'll use serial communication to exchange information between the
 microcontroller and your laptop. But before we do that we have to wire up everything.
