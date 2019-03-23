@@ -1,8 +1,13 @@
 # I2C
 
+<!-- 
 We just saw the serial communication protocol. It's a widely used protocol because it's very
 simple and this simplicity makes it easy to implement on top of other protocols like Bluetooth and
 USB.
+ -->
+
+シリアル通信のプロトコルを見てきました。シリアル通信は広く利用されているプロトコルです。
+なぜなら、シリアル通信は単純で、単純だからこそBluetoothやUSBのようなプロトコル上に実装することが容易であるためです。
 
 However, it's simplicity is also a downside. More elaborated data exchanges, like reading a digital
 sensor, would require the sensor vendor to come up with another protocol on top of it.
