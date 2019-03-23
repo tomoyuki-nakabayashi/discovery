@@ -1,4 +1,6 @@
-# Read a single register
+<!-- # Read a single register -->
+
+# 1つのレジスタを読む
 
 Let's put all that theory into practice!
 
