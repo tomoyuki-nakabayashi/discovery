@@ -1,4 +1,6 @@
-# Bluetooth setup
+<!-- # Bluetooth setup -->
+
+# Bluetooth設定
 
 It's time to get rid of some wires. Serial communication can not only be emulated on top of the USB
 protocol; it can also be emulated on top of the Bluetooth protocol. This serial over Bluetooth
