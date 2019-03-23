@@ -1,4 +1,6 @@
-# Send a single byte
+<!-- # Send a single byte -->
+
+# 1バイト送信
 
 Our first task will be to send a single byte from the microcontroller to the laptop over the serial
 connection.
