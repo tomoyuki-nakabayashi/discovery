@@ -1,0 +1,408 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Flashへの書き込み</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="../favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="../favicon.png">
+        
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">導入</a></li><li class="chapter-item expanded "><a href="../01-background/index.html"><strong aria-hidden="true">1.</strong> 背景</a></li><li class="chapter-item expanded "><a href="../02-requirements/index.html"><strong aria-hidden="true">2.</strong> ハードウェア/知識の要求</a></li><li class="chapter-item expanded "><a href="../03-setup/index.html"><strong aria-hidden="true">3.</strong> 開発環境の構築</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../03-setup/linux.html"><strong aria-hidden="true">3.1.</strong> Linux</a></li><li class="chapter-item expanded "><a href="../03-setup/windows.html"><strong aria-hidden="true">3.2.</strong> Windows</a></li><li class="chapter-item expanded "><a href="../03-setup/macos.html"><strong aria-hidden="true">3.3.</strong> macOS</a></li><li class="chapter-item expanded "><a href="../03-setup/verify.html"><strong aria-hidden="true">3.4.</strong> インストールの確認</a></li></ol></li><li class="chapter-item expanded "><a href="../04-meet-your-hardware/index.html"><strong aria-hidden="true">4.</strong> ハードウェアとの出会い</a></li><li class="chapter-item expanded "><a href="../05-led-roulette/index.html"><strong aria-hidden="true">5.</strong> LEDルーレット</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../05-led-roulette/build-it.html"><strong aria-hidden="true">5.1.</strong> ビルド</a></li><li class="chapter-item expanded "><a href="../05-led-roulette/flash-it.html" class="active"><strong aria-hidden="true">5.2.</strong> Flashへの書き込み</a></li><li class="chapter-item expanded "><a href="../05-led-roulette/debug-it.html"><strong aria-hidden="true">5.3.</strong> デバッグ</a></li><li class="chapter-item expanded "><a href="../05-led-roulette/the-led-and-delay-abstractions.html"><strong aria-hidden="true">5.4.</strong> ledとdelayの抽象化</a></li><li class="chapter-item expanded "><a href="../05-led-roulette/the-challenge.html"><strong aria-hidden="true">5.5.</strong> 課題</a></li><li class="chapter-item expanded "><a href="../05-led-roulette/my-solution.html"><strong aria-hidden="true">5.6.</strong> 解答例</a></li></ol></li><li class="chapter-item expanded "><a href="../06-hello-world/index.html"><strong aria-hidden="true">6.</strong> Hello, world!</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../06-hello-world/panic.html"><strong aria-hidden="true">6.1.</strong> panic!</a></li></ol></li><li class="chapter-item expanded "><a href="../07-registers/index.html"><strong aria-hidden="true">7.</strong> レジスタ</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../07-registers/rtrm.html"><strong aria-hidden="true">7.1.</strong> RTRM</a></li><li class="chapter-item expanded "><a href="../07-registers/optimization.html"><strong aria-hidden="true">7.2.</strong> (誤った)最適化</a></li><li class="chapter-item expanded "><a href="../07-registers/bad-address.html"><strong aria-hidden="true">7.3.</strong> 0xBAAAAAAD番地</a></li><li class="chapter-item expanded "><a href="../07-registers/spooky-action-at-a-distance.html"><strong aria-hidden="true">7.4.</strong> 異なる場所での不気味な動作</a></li><li class="chapter-item expanded "><a href="../07-registers/type-safe-manipulation.html"><strong aria-hidden="true">7.5.</strong> 型安全な操作</a></li></ol></li><li class="chapter-item expanded "><a href="../08-leds-again/index.html"><strong aria-hidden="true">8.</strong> LED、再び</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../08-leds-again/power.html"><strong aria-hidden="true">8.1.</strong> 電源</a></li><li class="chapter-item expanded "><a href="../08-leds-again/configuration.html"><strong aria-hidden="true">8.2.</strong> 設定</a></li><li class="chapter-item expanded "><a href="../08-leds-again/the-solution.html"><strong aria-hidden="true">8.3.</strong> 解答例</a></li></ol></li><li class="chapter-item expanded "><a href="../09-clocks-and-timers/index.html"><strong aria-hidden="true">9.</strong> クロックと時間</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../09-clocks-and-timers/for-loop-delays.html"><strong aria-hidden="true">9.1.</strong> forループで遅延</a></li><li class="chapter-item expanded "><a href="../09-clocks-and-timers/nop.html"><strong aria-hidden="true">9.2.</strong> NOP</a></li><li class="chapter-item expanded "><a href="../09-clocks-and-timers/one-shot-timer.html"><strong aria-hidden="true">9.3.</strong> ワンショットタイマ</a></li><li class="chapter-item expanded "><a href="../09-clocks-and-timers/initialization.html"><strong aria-hidden="true">9.4.</strong> 初期化</a></li><li class="chapter-item expanded "><a href="../09-clocks-and-timers/busy-waiting.html"><strong aria-hidden="true">9.5.</strong> ビジーウェイト</a></li><li class="chapter-item expanded "><a href="../09-clocks-and-timers/putting-it-all-together.html"><strong aria-hidden="true">9.6.</strong> 全てをまとめる</a></li></ol></li><li class="chapter-item expanded "><a href="../10-serial-communication/index.html"><strong aria-hidden="true">10.</strong> シリアル通信</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../10-serial-communication/nix-tooling.html"><strong aria-hidden="true">10.1.</strong> *nixのツール</a></li><li class="chapter-item expanded "><a href="../10-serial-communication/windows-tooling.html"><strong aria-hidden="true">10.2.</strong> Windowsのツール</a></li><li class="chapter-item expanded "><a href="../10-serial-communication/loopbacks.html"><strong aria-hidden="true">10.3.</strong> ループバック</a></li></ol></li><li class="chapter-item expanded "><a href="../11-usart/index.html"><strong aria-hidden="true">11.</strong> USART</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../11-usart/send-a-single-byte.html"><strong aria-hidden="true">11.1.</strong> 1バイト送信</a></li><li class="chapter-item expanded "><a href="../11-usart/send-a-string.html"><strong aria-hidden="true">11.2.</strong> 文字列送信</a></li><li class="chapter-item expanded "><a href="../11-usart/buffer-overrun.html"><strong aria-hidden="true">11.3.</strong> バッファオーバーラン</a></li><li class="chapter-item expanded "><a href="../11-usart/uprintln.html"><strong aria-hidden="true">11.4.</strong> uprintln!</a></li><li class="chapter-item expanded "><a href="../11-usart/receive-a-single-byte.html"><strong aria-hidden="true">11.5.</strong> 1バイト受信</a></li><li class="chapter-item expanded "><a href="../11-usart/echo-server.html"><strong aria-hidden="true">11.6.</strong> エコーサーバー</a></li><li class="chapter-item expanded "><a href="../11-usart/reverse-a-string.html"><strong aria-hidden="true">11.7.</strong> 文字列の反転</a></li><li class="chapter-item expanded "><a href="../11-usart/my-solution.html"><strong aria-hidden="true">11.8.</strong> 解答例</a></li></ol></li><li class="chapter-item expanded "><a href="../12-bluetooth-setup/index.html"><strong aria-hidden="true">12.</strong> Bluetooth設定</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../12-bluetooth-setup/linux.html"><strong aria-hidden="true">12.1.</strong> Linux</a></li><li class="chapter-item expanded "><a href="../12-bluetooth-setup/loopback.html"><strong aria-hidden="true">12.2.</strong> ループバック</a></li></ol></li><li class="chapter-item expanded "><a href="../13-serial-over-bluetooth/index.html"><strong aria-hidden="true">13.</strong> Bluetooth経由のシリアル</a></li><li class="chapter-item expanded "><a href="../14-i2c/index.html"><strong aria-hidden="true">14.</strong> I2C</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../14-i2c/the-general-protocol.html"><strong aria-hidden="true">14.1.</strong> 一般的なプロトコル</a></li><li class="chapter-item expanded "><a href="../14-i2c/lsm303dlhc.html"><strong aria-hidden="true">14.2.</strong> LSM303DLHC</a></li><li class="chapter-item expanded "><a href="../14-i2c/read-a-single-register.html"><strong aria-hidden="true">14.3.</strong> 1つのレジスタを読む</a></li><li class="chapter-item expanded "><a href="../14-i2c/the-solution.html"><strong aria-hidden="true">14.4.</strong> 解答例</a></li><li class="chapter-item expanded "><a href="../14-i2c/read-several-registers.html"><strong aria-hidden="true">14.5.</strong> 複数のレジスタを読む</a></li></ol></li><li class="chapter-item expanded "><a href="../15-led-compass/index.html"><strong aria-hidden="true">15.</strong> LEDコンパス</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../15-led-compass/take-1.html"><strong aria-hidden="true">15.1.</strong> 第一弾</a></li><li class="chapter-item expanded "><a href="../15-led-compass/solution-1.html"><strong aria-hidden="true">15.2.</strong> 解答例1</a></li><li class="chapter-item expanded "><a href="../15-led-compass/take-2.html"><strong aria-hidden="true">15.3.</strong> 第二弾</a></li><li class="chapter-item expanded "><a href="../15-led-compass/solution-2.html"><strong aria-hidden="true">15.4.</strong> 解答例2</a></li><li class="chapter-item expanded "><a href="../15-led-compass/magnitude.html"><strong aria-hidden="true">15.5.</strong> 大きさ</a></li><li class="chapter-item expanded "><a href="../15-led-compass/calibration.html"><strong aria-hidden="true">15.6.</strong> キャリブレーション</a></li></ol></li><li class="chapter-item expanded "><a href="../16-punch-o-meter/index.html"><strong aria-hidden="true">16.</strong> パンチングマシン</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../16-punch-o-meter/gravity-is-up.html"><strong aria-hidden="true">16.1.</strong> 重力は上を向いている？</a></li><li class="chapter-item expanded "><a href="../16-punch-o-meter/the-challenge.html"><strong aria-hidden="true">16.2.</strong> 課題</a></li><li class="chapter-item expanded "><a href="../16-punch-o-meter/my-solution.html"><strong aria-hidden="true">16.3.</strong> 解答例</a></li></ol></li><li class="chapter-item expanded "><a href="../explore.html"><strong aria-hidden="true">17.</strong> もっと楽しむために</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="../appendix/1-general-troubleshooting/index.html">トラブルシューティング</a></li><li class="spacer"></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <!-- # Flash it -->
+<h1><a class="header" href="#flashへの書き込み" id="flashへの書き込み">Flashへの書き込み</a></h1>
+<!-- 
+Flashing is the process of moving our program into the microcontroller's (persistent) memory. Once
+flashed, the microcontroller will execute the flashed program every time it is powered on.
+ -->
+<p>Flashへの書き込みとは、マイクロコントローラの（永続）メモリにプログラムを移動するプロセスのことです。
+一度、Flashへ書き込むと、マイクロコントローラは、電源が入るたびに書き込まれたプログラムを実行します。</p>
+<!-- 
+In this case, our `led-roulette` program will be the *only* program in the microcontroller memory.
+By this I mean that there's nothing else running on the microcontroller: no OS, no "daemon",
+nothing. `led-roulette` has full control over the device.
+ -->
+<p>今回の場合、<code>led-roulette</code>プログラムが、マイクロコントローラのメモリ内にある<em>唯一の</em>プログラムになります。
+これは、マイクロコントローラ上で他には何も実行されないことを意味します。OSも「デーモン」もありません。
+<code>led-roulette</code>は、デバイスを完全に制御できます。</p>
+<!-- 
+Onto the actual flashing. First thing we need is to do is launch OpenOCD. We did that in the
+previous section but this time we'll run the command inside a temporary directory (`/tmp` on *nix;
+`%TEMP%` on Windows).
+ -->
+<p>実際にFlashへ書き込みましょう。まず始めに、OpenOCDを起動する必要が有ります。これは、前のセクションで行いました。
+しかし、今回はこのコマンドを一時ディレクトリ（*nixでは<code>/tmp</code>、Windowsでは<code>%TEMP%</code>）の中で実行します。</p>
+<!-- 
+Make sure the F3 is connected to your laptop and run the following commands on a new terminal.
+ -->
+<p>F3がノートPCに接続されていることを確認し、新しい端末で次のコマンドを実行して下さい。</p>
+<pre><code class="language-console">$ # *nix
+$ cd /tmp
+
+$ # Windows
+$ cd %TEMP%
+
+$ # Windowsでは、追加で`-s %PATH_TO_OPENOCD%\share\scripts`が必要なことを思い出して下さい。
+$ openocd \
+  -f interface/stlink-v2-1.cfg \
+  -f target/stm32f3x.cfg
+</code></pre>
+<!-- 
+> **NOTE** Older revisions of the board need to pass slightly different arguments to
+> `openocd`. Review [this section] for the details.
+ -->
+<blockquote>
+<p><strong>注記</strong> ボードが古いリビジョンの場合、<code>openocd</code>に若干異なる引数を渡す必要があります。
+詳細は<a href="../03-setup/verify.html#first-openocd-connection">このセクション</a>を見返して下さい。</p>
+</blockquote>
+<!-- [this section]: ../03-setup/verify.md#first-openocd-connection -->
+<!-- The program will block; leave that terminal open. -->
+<p>このプログラムは端末をブロックします。端末を開いたままにしておいて下さい。</p>
+<!-- Now it's a good time to explain what this command is actually doing. -->
+<p>さて、このコマンドが実際に何をやっているのか、説明するのに良いタイミングです。</p>
+<!-- 
+I mentioned that the F3 actually has two microcontrollers. One of them is used as a
+programmer/debugger. The part of the board that's used as a programmer is called ST-LINK (that's what
+STMicroelectronics decided to call it). This ST-LINK is connected to the target microcontroller
+using a Serial Wire Debug (SWD) interface (this interface is an ARM standard so you'll run into it
+when dealing with other Cortex-M based microcontrollers). This SWD interface can be used to flash
+and debug a microcontroller. The ST-LINK is connected to the "USB ST-LINK" port and will appear as
+a USB device when you connect the F3 to your laptop.
+ -->
+<p>F3が実際には2つのマイクロコントローラを搭載していると述べました。1つはプログラマ/デバッガとして使用されます。
+プログラマとして使用されるボードの一部をST-LINKと呼びます（STマイクロエレクトロニクスがそう呼ぶと決めたからです）。
+ST-LINKは、Serial Wire Debug (SWD) インタフェースを使ってターゲットのマイクロコントローラと接続されます
+（SWDインタフェースはARMの標準なので、他のCortex-Mベースのマイクロコントローラを扱う時でも使うでしょう）。
+SWDインタフェースは、マイクロコントローラのFlashに書き込み、デバッグするために使用されます。
+ST-LINKは「USB ST-LINK」ポートに接続されています。そのため、F3をノートPCに接続した時に、USBデバイスとして現れます。</p>
+<p align="center">
+<img height=640 title="On-board ST-LINK" src="../assets/st-link.png">
+</p>
+<!-- 
+As for OpenOCD, it's software that provides some services like a *GDB server* on top of USB
+devices that expose a debugging protocol like SWD or JTAG.
+ -->
+<p>OpenOCDについては、SWDやJTAGのようなデバッグプロトコルを公開するUSBデバイスに、<em>GDBサーバー</em>のようなサービスを提供するソフトウェアです。</p>
+<!-- 
+Onto the actual command: those `.cfg` files we are using instruct OpenOCD to look for a ST-LINK USB
+device (`interface/stlink-v2-1.cfg`) and to expect a STM32F3XX microcontroller
+(`target/stm32f3x.cfg`) to be connected to the ST-LINK.
+ -->
+<p>実際のコマンドで、<code>.cfg</code>ファイルは、OpenOCDにST-LINK USBデバイスを探させて（<code>interface/stlink-v2-1.cfg</code>）、
+STM32F3XXマイクロコントローラがST-LINKに接続されているのを求めています(<code>target/stm32f3x.cfg</code>)。</p>
+<!-- The OpenOCD output looks like this: -->
+<p>OpenOCDの出力は次のようになります。</p>
+<pre><code class="language-console">Open On-Chip Debugger 0.9.0 (2016-04-27-23:18)
+Licensed under GNU GPL v2
+For bug reports, read
+        http://openocd.org/doc/doxygen/bugs.html
+Info : auto-selecting first available session transport &quot;hla_swd&quot;. To override use 'transport select &lt;transport&gt;'.
+adapter speed: 1000 kHz
+adapter_nsrst_delay: 100
+Info : The selected transport took over low-level target control. The results might differ compared to plain JTAG/SWD
+none separate
+Info : Unable to match requested speed 1000 kHz, using 950 kHz
+Info : Unable to match requested speed 1000 kHz, using 950 kHz
+Info : clock speed 950 kHz
+Info : STLINK v2 JTAG v27 API v2 SWIM v15 VID 0x0483 PID 0x374B
+Info : using stlink api v2
+Info : Target voltage: 2.919073
+Info : stm32f3x.cpu: hardware has 6 breakpoints, 4 watchpoints
+</code></pre>
+<!-- 
+The "6 breakpoints, 4 watchpoints" part indicates the debugging features the processor has
+available.
+ -->
+<p>「6 breakpoints, 4 watchpoints」の部分は、プロセッサで利用可能なデバッグ機能を示しています。</p>
+<!-- I mentioned that OpenOCD provides a GDB server so let's connect to that right now: -->
+<p>OpenOCDはGDBサーバーの機能を提供すると言いました。それでは、早速接続してみましょう。</p>
+<pre><code class="language-console">$ &lt;gdb&gt; -q target/thumbv7em-none-eabihf/debug/led-roulette
+Reading symbols from target/thumbv7em-none-eabihf/debug/led-roulette...done.
+(gdb)
+</code></pre>
+<!-- 
+**NOTE**: `<gdb>` represents a GDB program capable of debugging ARM binaries.
+This could be `arm-none-eabi-gdb`, `gdb-multiarch` or `gdb` depending on your
+system -- you may have to try all three.
+ -->
+<p><strong>注記</strong> <code>&lt;gdb&gt;</code>は、ARMバイナリをデバッグできるGDBプログラムを意味しています。
+これは、<code>arm-none-eabi-gdb</code>か<code>gdb-multiarch</code>か<code>gdb</code>です。
+あなたのシステムに依存しているため、3つ全てを試してみる必要があるでしょう。</p>
+<!-- 
+This only opens a GDB shell. To actually connect to the OpenOCD GDB server, use the following
+command within the GDB shell:
+ -->
+<p>まだGDBシェルを開いただけです。OpenOCDのGDBサーバーに実際に接続するためには、GDBシェル内で次のコマンドを実行します。</p>
+<pre><code>(gdb) target remote :3333
+Remote debugging using :3333
+0x00000000 in ?? ()
+</code></pre>
+<!-- 
+By default OpenOCD's GDB server listens on TCP port 3333 (localhost). This command is connecting to
+that port.
+ -->
+<p>デフォルトでは、OpenOCDのGDBサーバーは3333番のTCPポート（localhost）で待ち受けています。
+上記コマンドはこのポートへと接続します。</p>
+<!-- After entering this command, you'll see new output in the OpenOCD terminal: -->
+<p>上記コマンドを実行した後、次のような出力が、OpenOCDの端末に現れるでしょう。</p>
+<pre><code class="language-diff"> Info : stm32f3x.cpu: hardware has 6 breakpoints, 4 watchpoints
++Info : accepting 'gdb' connection on tcp/3333
++Info : device id = 0x10036422
++Info : flash size = 256kbytes
+</code></pre>
+<!-- Almost there. To flash the device, we'll use the `load` command inside the GDB shell: -->
+<p>もう一歩です。デバイスのFlashに書き込むには、<code>load</code>コマンドをGDBシェル内で使います。</p>
+<pre><code>(gdb) load
+Loading section .vector_table, size 0x188 lma 0x8000000
+Loading section .text, size 0x38a lma 0x8000188
+Loading section .rodata, size 0x8 lma 0x8000514
+Start address 0x8000188, load size 1306
+Transfer rate: 6 KB/sec, 435 bytes/write.
+</code></pre>
+<!-- And that's it. You'll also see new output in the OpenOCD terminal. -->
+<p>これで終わりです。OpenOCDの端末に新しい出力が見られるでしょう。</p>
+<pre><code class="language-diff"> Info : flash size = 256kbytes
++Info : Unable to match requested speed 1000 kHz, using 950 kHz
++Info : Unable to match requested speed 1000 kHz, using 950 kHz
++adapter speed: 950 kHz
++target state: halted
++target halted due to debug-request, current mode: Thread
++xPSR: 0x01000000 pc: 0x08000194 msp: 0x2000a000
++Info : Unable to match requested speed 8000 kHz, using 4000 kHz
++Info : Unable to match requested speed 8000 kHz, using 4000 kHz
++adapter speed: 4000 kHz
++target state: halted
++target halted due to breakpoint, current mode: Thread
++xPSR: 0x61000000 pc: 0x2000003a msp: 0x2000a000
++Info : Unable to match requested speed 1000 kHz, using 950 kHz
++Info : Unable to match requested speed 1000 kHz, using 950 kHz
++adapter speed: 950 kHz
++target state: halted
++target halted due to debug-request, current mode: Thread
++xPSR: 0x01000000 pc: 0x08000194 msp: 0x2000a000
+</code></pre>
+<!-- Our program is loaded, let's debug it! -->
+<p>プログラムはロードされました。デバッグしてみましょう！</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../05-led-roulette/build-it.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../05-led-roulette/debug-it.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../05-led-roulette/build-it.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../05-led-roulette/debug-it.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

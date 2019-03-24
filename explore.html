@@ -1,0 +1,484 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>もっと楽しむために</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="favicon.png">
+        
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        
+        <link rel="stylesheet" href="css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">導入</a></li><li class="chapter-item expanded "><a href="01-background/index.html"><strong aria-hidden="true">1.</strong> 背景</a></li><li class="chapter-item expanded "><a href="02-requirements/index.html"><strong aria-hidden="true">2.</strong> ハードウェア/知識の要求</a></li><li class="chapter-item expanded "><a href="03-setup/index.html"><strong aria-hidden="true">3.</strong> 開発環境の構築</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="03-setup/linux.html"><strong aria-hidden="true">3.1.</strong> Linux</a></li><li class="chapter-item expanded "><a href="03-setup/windows.html"><strong aria-hidden="true">3.2.</strong> Windows</a></li><li class="chapter-item expanded "><a href="03-setup/macos.html"><strong aria-hidden="true">3.3.</strong> macOS</a></li><li class="chapter-item expanded "><a href="03-setup/verify.html"><strong aria-hidden="true">3.4.</strong> インストールの確認</a></li></ol></li><li class="chapter-item expanded "><a href="04-meet-your-hardware/index.html"><strong aria-hidden="true">4.</strong> ハードウェアとの出会い</a></li><li class="chapter-item expanded "><a href="05-led-roulette/index.html"><strong aria-hidden="true">5.</strong> LEDルーレット</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="05-led-roulette/build-it.html"><strong aria-hidden="true">5.1.</strong> ビルド</a></li><li class="chapter-item expanded "><a href="05-led-roulette/flash-it.html"><strong aria-hidden="true">5.2.</strong> Flashへの書き込み</a></li><li class="chapter-item expanded "><a href="05-led-roulette/debug-it.html"><strong aria-hidden="true">5.3.</strong> デバッグ</a></li><li class="chapter-item expanded "><a href="05-led-roulette/the-led-and-delay-abstractions.html"><strong aria-hidden="true">5.4.</strong> ledとdelayの抽象化</a></li><li class="chapter-item expanded "><a href="05-led-roulette/the-challenge.html"><strong aria-hidden="true">5.5.</strong> 課題</a></li><li class="chapter-item expanded "><a href="05-led-roulette/my-solution.html"><strong aria-hidden="true">5.6.</strong> 解答例</a></li></ol></li><li class="chapter-item expanded "><a href="06-hello-world/index.html"><strong aria-hidden="true">6.</strong> Hello, world!</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="06-hello-world/panic.html"><strong aria-hidden="true">6.1.</strong> panic!</a></li></ol></li><li class="chapter-item expanded "><a href="07-registers/index.html"><strong aria-hidden="true">7.</strong> レジスタ</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="07-registers/rtrm.html"><strong aria-hidden="true">7.1.</strong> RTRM</a></li><li class="chapter-item expanded "><a href="07-registers/optimization.html"><strong aria-hidden="true">7.2.</strong> (誤った)最適化</a></li><li class="chapter-item expanded "><a href="07-registers/bad-address.html"><strong aria-hidden="true">7.3.</strong> 0xBAAAAAAD番地</a></li><li class="chapter-item expanded "><a href="07-registers/spooky-action-at-a-distance.html"><strong aria-hidden="true">7.4.</strong> 異なる場所での不気味な動作</a></li><li class="chapter-item expanded "><a href="07-registers/type-safe-manipulation.html"><strong aria-hidden="true">7.5.</strong> 型安全な操作</a></li></ol></li><li class="chapter-item expanded "><a href="08-leds-again/index.html"><strong aria-hidden="true">8.</strong> LED、再び</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="08-leds-again/power.html"><strong aria-hidden="true">8.1.</strong> 電源</a></li><li class="chapter-item expanded "><a href="08-leds-again/configuration.html"><strong aria-hidden="true">8.2.</strong> 設定</a></li><li class="chapter-item expanded "><a href="08-leds-again/the-solution.html"><strong aria-hidden="true">8.3.</strong> 解答例</a></li></ol></li><li class="chapter-item expanded "><a href="09-clocks-and-timers/index.html"><strong aria-hidden="true">9.</strong> クロックと時間</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="09-clocks-and-timers/for-loop-delays.html"><strong aria-hidden="true">9.1.</strong> forループで遅延</a></li><li class="chapter-item expanded "><a href="09-clocks-and-timers/nop.html"><strong aria-hidden="true">9.2.</strong> NOP</a></li><li class="chapter-item expanded "><a href="09-clocks-and-timers/one-shot-timer.html"><strong aria-hidden="true">9.3.</strong> ワンショットタイマ</a></li><li class="chapter-item expanded "><a href="09-clocks-and-timers/initialization.html"><strong aria-hidden="true">9.4.</strong> 初期化</a></li><li class="chapter-item expanded "><a href="09-clocks-and-timers/busy-waiting.html"><strong aria-hidden="true">9.5.</strong> ビジーウェイト</a></li><li class="chapter-item expanded "><a href="09-clocks-and-timers/putting-it-all-together.html"><strong aria-hidden="true">9.6.</strong> 全てをまとめる</a></li></ol></li><li class="chapter-item expanded "><a href="10-serial-communication/index.html"><strong aria-hidden="true">10.</strong> シリアル通信</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="10-serial-communication/nix-tooling.html"><strong aria-hidden="true">10.1.</strong> *nixのツール</a></li><li class="chapter-item expanded "><a href="10-serial-communication/windows-tooling.html"><strong aria-hidden="true">10.2.</strong> Windowsのツール</a></li><li class="chapter-item expanded "><a href="10-serial-communication/loopbacks.html"><strong aria-hidden="true">10.3.</strong> ループバック</a></li></ol></li><li class="chapter-item expanded "><a href="11-usart/index.html"><strong aria-hidden="true">11.</strong> USART</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="11-usart/send-a-single-byte.html"><strong aria-hidden="true">11.1.</strong> 1バイト送信</a></li><li class="chapter-item expanded "><a href="11-usart/send-a-string.html"><strong aria-hidden="true">11.2.</strong> 文字列送信</a></li><li class="chapter-item expanded "><a href="11-usart/buffer-overrun.html"><strong aria-hidden="true">11.3.</strong> バッファオーバーラン</a></li><li class="chapter-item expanded "><a href="11-usart/uprintln.html"><strong aria-hidden="true">11.4.</strong> uprintln!</a></li><li class="chapter-item expanded "><a href="11-usart/receive-a-single-byte.html"><strong aria-hidden="true">11.5.</strong> 1バイト受信</a></li><li class="chapter-item expanded "><a href="11-usart/echo-server.html"><strong aria-hidden="true">11.6.</strong> エコーサーバー</a></li><li class="chapter-item expanded "><a href="11-usart/reverse-a-string.html"><strong aria-hidden="true">11.7.</strong> 文字列の反転</a></li><li class="chapter-item expanded "><a href="11-usart/my-solution.html"><strong aria-hidden="true">11.8.</strong> 解答例</a></li></ol></li><li class="chapter-item expanded "><a href="12-bluetooth-setup/index.html"><strong aria-hidden="true">12.</strong> Bluetooth設定</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="12-bluetooth-setup/linux.html"><strong aria-hidden="true">12.1.</strong> Linux</a></li><li class="chapter-item expanded "><a href="12-bluetooth-setup/loopback.html"><strong aria-hidden="true">12.2.</strong> ループバック</a></li></ol></li><li class="chapter-item expanded "><a href="13-serial-over-bluetooth/index.html"><strong aria-hidden="true">13.</strong> Bluetooth経由のシリアル</a></li><li class="chapter-item expanded "><a href="14-i2c/index.html"><strong aria-hidden="true">14.</strong> I2C</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="14-i2c/the-general-protocol.html"><strong aria-hidden="true">14.1.</strong> 一般的なプロトコル</a></li><li class="chapter-item expanded "><a href="14-i2c/lsm303dlhc.html"><strong aria-hidden="true">14.2.</strong> LSM303DLHC</a></li><li class="chapter-item expanded "><a href="14-i2c/read-a-single-register.html"><strong aria-hidden="true">14.3.</strong> 1つのレジスタを読む</a></li><li class="chapter-item expanded "><a href="14-i2c/the-solution.html"><strong aria-hidden="true">14.4.</strong> 解答例</a></li><li class="chapter-item expanded "><a href="14-i2c/read-several-registers.html"><strong aria-hidden="true">14.5.</strong> 複数のレジスタを読む</a></li></ol></li><li class="chapter-item expanded "><a href="15-led-compass/index.html"><strong aria-hidden="true">15.</strong> LEDコンパス</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="15-led-compass/take-1.html"><strong aria-hidden="true">15.1.</strong> 第一弾</a></li><li class="chapter-item expanded "><a href="15-led-compass/solution-1.html"><strong aria-hidden="true">15.2.</strong> 解答例1</a></li><li class="chapter-item expanded "><a href="15-led-compass/take-2.html"><strong aria-hidden="true">15.3.</strong> 第二弾</a></li><li class="chapter-item expanded "><a href="15-led-compass/solution-2.html"><strong aria-hidden="true">15.4.</strong> 解答例2</a></li><li class="chapter-item expanded "><a href="15-led-compass/magnitude.html"><strong aria-hidden="true">15.5.</strong> 大きさ</a></li><li class="chapter-item expanded "><a href="15-led-compass/calibration.html"><strong aria-hidden="true">15.6.</strong> キャリブレーション</a></li></ol></li><li class="chapter-item expanded "><a href="16-punch-o-meter/index.html"><strong aria-hidden="true">16.</strong> パンチングマシン</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="16-punch-o-meter/gravity-is-up.html"><strong aria-hidden="true">16.1.</strong> 重力は上を向いている？</a></li><li class="chapter-item expanded "><a href="16-punch-o-meter/the-challenge.html"><strong aria-hidden="true">16.2.</strong> 課題</a></li><li class="chapter-item expanded "><a href="16-punch-o-meter/my-solution.html"><strong aria-hidden="true">16.3.</strong> 解答例</a></li></ol></li><li class="chapter-item expanded "><a href="explore.html" class="active"><strong aria-hidden="true">17.</strong> もっと楽しむために</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="appendix/1-general-troubleshooting/index.html">トラブルシューティング</a></li><li class="spacer"></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <!-- # What's left for you to explore -->
+<h1><a class="header" href="#もっと楽しむために" id="もっと楽しむために">もっと楽しむために</a></h1>
+<!-- We have barely scratched the surface! There's lots of stuff left for you to explore: -->
+<p>まだ上っ面をなでただけです！まだまだたくさん楽しめるものがあります。</p>
+<!-- ## Multitasking -->
+<h2><a class="header" href="#マルチタスク" id="マルチタスク">マルチタスク</a></h2>
+<!-- 
+All our programs executed a single task. How could we achieve multitasking in a system with no OS,
+and thus no threads. There are two main approaches to multitasking: preemptive multitasking and
+cooperative multitasking.
+ -->
+<p>作ったプログラムは全てシングルタスクで実行しました。OSがなく、スレッドがないシステムでマルチタスクを実現するにはどうするのでしょうか。
+2つの主なアプローチがあります。プリエンプティブマルチタスクと協調的マルチタスクです。</p>
+<!-- 
+In preemptive multitasking a task that's currently being executed can, at any point in time, be
+*preempted* (interrupted) by another task. On preemption, the first task will be suspended and the
+processor will instead execute the second task. At some point the first task will be resumed.
+Microcontrollers provide hardware support for preemption in the form of *interrupts*.
+ -->
+<p>プリエンプティブマルチタスクでは、実行されているタスクは、いつでも、他のタスクによって<em>プリエンプション</em>（割込み）されます。
+プリエンプションでは、最初のタスクは一時停止され、プロセッサは2つ目のタスクを代わりに実行します。
+どこかの時点で最初のタスクが再開されます。
+マイクロコントローラは、プリエンプションを<em>割込み</em>という形でハードウェアサポートしています。</p>
+<!-- 
+In cooperative multitasking a task that's being executed will run until it reaches a *suspension
+point*. When the processor reaches that suspension point it will stop executing the current task and
+instead go and execute a different task. At some point the first task will be resumed. The main
+difference between these two approaches to multitasking is that in cooperative multitasking *yields*
+execution control at *known* suspension points instead of being forcefully preempted at any point of
+its execution.
+ -->
+<p>協調的マルチタスクでは、実行されているタスクは<em>中断点</em>に到達するまで実行します。
+プロセッサが中断点に到達すると、現在のタスクの実行を停止し、代わりに別のタスクを実行します。どこかの時点で最初のタスクが再開されます。
+マルチタスクのための2つのアプローチの主な違いは、いかなるタイミングでも強制的にその実行がプリエンプションされる代わりに、
+協調的マルチタスクでは<em>既知の</em>中断点で実行制御を<em>譲る</em>ことです。</p>
+<h2><a class="header" href="#direct-memory-access-dma" id="direct-memory-access-dma">Direct Memory Access (DMA).</a></h2>
+<!-- 
+This peripheral is a kind of *asynchronous* `memcpy`. So far our programs have
+been pumping data, byte by byte, into peripherals like UART and I2C. This DMA
+peripheral can be used to perform bulk transfers of data. Either from RAM to
+RAM, from a peripheral, like a UART, to RAM or from RAM to a peripheral. You can
+schedule a DMA transfer, like read 256 bytes from USART1 into this buffer, leave
+it running in the background and then poll some register to see if it has
+completed so you can do other stuff while the transfer is ongoing.
+ -->
+<p>このペリフェラルは、<em>非同期</em>の<code>memcpy</code>です。これまでのところ、プログラムは、UARTやI2Cのようなペリフェラルに、バイトごとにデータを送信してきました。
+DMAペリフェラルは、データの一括転送を行うために使用できます。RAMからRAM、UARTのようなペリフェラルからRAM、RAMからペリフェラルへ転送できます。
+DMA転送をスケジュールすることもできます。
+例えば256バイトをUSART1からバッファへ読み込む、という処理をバックグランドで実行しながら、転送が完了したかをレジスタをポーリングすることで、
+転送を行っている間、他のことができます。</p>
+<!-- ## Sleeping -->
+<h2><a class="header" href="#スリープ" id="スリープ">スリープ</a></h2>
+<!-- 
+All our programs have been continuously polling peripherals to see if there's
+anything that needs to be done. However, some times there's nothing to be done!
+At those times, the microcontroller should "sleep".
+ -->
+<p>作った全てのプログラムは、必要な処理が終わったかどうかを見るために、ペリフェラルを継続的にポーリングしています。
+しかし、なにもすることがないことがあります。
+そのような場合、マイクロコントローラは「スリープ」しなければなりません。</p>
+<!-- 
+When the processor sleeps, it stops executing instructions and this saves power.
+It's almost always a good idea to save power so your microcontroller should be
+sleeping as much as possible. But, how does it know when it has to wake up to
+perform some action? "Interrupts" are one of the events that wake up the
+microcontroller but there are others and the `wfi` and `wfe` are the
+instructions that make the processor "sleep".
+ -->
+<p>プロセッサがスリープしている時、命令の実行を停止し、電力を節約します。
+これは、電力節約のために、多くの場合、良いことです。マイクロコントローラは可能な限りスリープしなければなりません。
+しかし、何か処理を行うためにいつ目覚めるか、をどうやって知ればよいでしょうか？
+「割込み」はマイクロコントローラを目覚めさせるイベントの1つですが、他の方法もあります。
+<code>wfi</code>と<code>wfe</code>はプロセッサを「スリープ」させる命令です。</p>
+<!-- ## Pulse Width Modulation (PWM) -->
+<h2><a class="header" href="#パルス幅変調pwm" id="パルス幅変調pwm">パルス幅変調（PWM）</a></h2>
+<!-- 
+In a nutshell, PWM is turning on something and then turning it off periodically
+while keeping some proportion ("duty cycle") between the "on time" and the "off
+time". When used on a LED with a sufficiently high frequency, this can be used
+to dim the LED. A low duty cycle, say 10% on time and 90% off time, will make
+the LED very dim wheres a high duty cycle, say 90% on time and 10% off time,
+will make the LED much brighter (almost as if it were fully powered).
+ -->
+<p>手短に言うと、PWMは、周期的に何かをオンにして、その後オフにすることです。
+ここで、「オンの時間」と「オフの時間」の間は、ある割合（「デューティ比」）を保ち続けます。
+十分周波数の高いLEDを使用すると、PWMは、LEDを薄暗くするために使用できます。
+ディーティ比が低いと、つまり10%オンで90%オフだと、LEDは非常に薄暗くなります。反対に、デューティ比が高いと、
+つまり90%オンで10%オフだと、LEDはかなり明るくなります（ほとんど完全に電力を供給されたように）。</p>
+<!-- 
+In general, PWM can be used to control how much *power* is given to some
+electric device. With proper (power) electronics between a microcontroller and
+an electrical motor, PWM can be used to control how much power is given to the
+motor thus it can be used to control its torque and speed. Then you can add an
+angular position sensor and you got yourself a closed loop controller that can
+control the position of the motor at different loads.
+ -->
+<p>通常、PWMは電気機器にどの程度<em>電力</em>を供給するか、制御するために使われます。
+マイクロコントローラと電気モータとの間に、適切な（電力）電子機器を用いて、PWMでモータにどれだけの電力供給するか制御できます。
+そのため、PWMを使用してモータのトルクと速度を制御できます。
+それから、角位置センサを追加し、閉ループコントローラを入手できます。
+このコントローラは、様々な負荷でモータの位置を制御することができます。</p>
+<!-- ## Digital input -->
+<h2><a class="header" href="#デジタル入力" id="デジタル入力">デジタル入力</a></h2>
+<!-- 
+We have used the microcontroller pins as digital outputs, to drive LEDs. But
+these pins can also be configured as digital inputs. As digital inputs, these
+pins can read the binary state of switches (on/off) or buttons (pressed/not
+pressed).
+ -->
+<p>LEDを駆動するために、マイクロコントローラのピンをデジタル出力として使用してきました。
+しかし、これらのピンはデジタル入力として設定することもできます。
+デジタル入力として、これらのピンは、スイッチ（オン/オフ）やボタン（押された/押されていない）の二値状態を読むことができます。</p>
+<!-- 
+(*spoilers* reading the binary state of switches / buttons is not as
+straightforward as it sounds ;-)
+ -->
+<p>（<em>ネタバレ</em> スイッチ/ボタンの二値状態を読むことは、思ったほど簡単ではありません ;-)）</p>
+<!-- ## Sensor fusion -->
+<h2><a class="header" href="#センサフュージョン" id="センサフュージョン">センサフュージョン</a></h2>
+<!-- 
+The STM32F3DISCOVERY contains three motion sensors: an accelerometer, a
+gyroscope and a magnetometer. On their own these measure: (proper) acceleration,
+angular speed and (the Earth's) magnetic field. But these magnitudes can be
+"fused" into something more useful: a "robust" measurement of the orientation of
+the board. Where robust means with less measurement error than a single sensor
+would be capable of.
+ -->
+<p>STM32F3DISCOVERYは3つのモーションセンサを搭載しています。加速度計、ジャイロスコープ、磁力計です。
+彼らは(proper)加速度、角速度、（地球）磁場を計測できます。
+しかし、これらの測定値は、「ロバストな」ボード向きの測定のように、もっと有用なものに「融合」することができます。
+ここでロバストが意味するところは、単一のセンサで計測できるものより、計測誤差が少ないことです。</p>
+<!-- 
+This idea of deriving more reliable data from different sources is known as
+sensor fusion.
+ -->
+<p>より信頼性の高いデータを、異なるソースから生み出すためのこのアイデアは、センサフュージョンと呼ばれています。</p>
+<!-- ## Analog-to-Digital Converters (ADC) -->
+<h2><a class="header" href="#アナログデジタルコンバータadc" id="アナログデジタルコンバータadc">アナログデジタルコンバータ（ADC）</a></h2>
+<!-- 
+There are a lots of digital sensors out there. You can use a protocol like I2C
+and SPI to read them. But analog sensors also exist! These sensors just output a
+voltage level that's proportional to the magnitude they are sensing.
+ -->
+<p>たくさんのデジタルセンサがあります。I2CやSPIのようなプロトコルを使って、センサからデータを読み出せます。
+しかし、アナログセンサも存在しています！これらのセンサは、検知している大きさに比例した電圧レベルを出力するだけです。</p>
+<!-- 
+The ADC peripheral can be use to convert that "analog" voltage level, say `1.25`
+Volts,into a "digital" number, say in the `[0, 65535]` range, that the processor
+can use in its calculations.
+ -->
+<p>ADCペリフェラルは、「アナログ」電圧を変換するために使用します。
+つまり<code>1.25</code>ボルトを、プロセッサが計算で使える「デジタル」な数値である<code>[0, 65535]</code>の範囲に変換します。</p>
+<!-- ## Digital-to-Analog Converters (DAC) -->
+<h2><a class="header" href="#デジタルアナログコンバータdac" id="デジタルアナログコンバータdac">デジタルアナログコンバータ（DAC）</a></h2>
+<!-- 
+As you might expect a DAC is exactly the opposite of ADC. You can write some
+digital value into a register to produce a voltage in the `[0, 3.3V]` range
+(assuming a `3.3V` power supply) on some "analog" pin. When this analog pin is
+connected to some appropriate electronics and the register is written to at some
+constant, fast rate (frequency) with the right values you can produce sounds or
+even music!
+ -->
+<p>予想の通り、DACはADCの反対のことを行います。
+何らかのデジタル値をレジスタに書き込むと、<code>[0, 3.3V]</code>の範囲の電圧を、「アナログ」ピンに出力します（電源が<code>3.3V</code>と仮定しています）。
+このアナログピンが、何らかの適切な電子機器に接続されており、何らかの定数がレジスタに書き込まれると、
+正しい値の速いレート（周波数）は、サウンドや音楽さえも生み出すことができます。</p>
+<!-- ## Real Time Clock (RTC) -->
+<h2><a class="header" href="#リアルタイムクロックrtc" id="リアルタイムクロックrtc">リアルタイムクロック（RTC）</a></h2>
+<!-- 
+This peripheral can be used to track time in "human format". Seconds, minutes,
+hours, days, months and years. This peripheral handles the translation from
+"ticks" to these human friendly units of time. It even handles leap years and
+Daylight Save Time for you!
+ -->
+<p>このペリフェラルは、「人間の形式」で時間を追跡するために使用できます。
+秒、分、時間、日、月、年の形式です。このペリフェラルは、「ティック」から人間が読みやすい時間の単位への変換を取り扱います。
+RTCは、うるう年や夏時間でさえも取り扱います！</p>
+<!-- ## Other communication protocols -->
+<h2><a class="header" href="#他の通信プロトコル" id="他の通信プロトコル">他の通信プロトコル</a></h2>
+<!-- SPI, I2S, SMBUS, CAN, IrDA, Ethernet, USB, Bluetooth, etc. -->
+<p>SPI, I2S, SMBUS, CAN, IrDA, Ethernet, USB, Bluetooth,など。</p>
+<!-- 
+Different applications use different communication protocols. User facing
+applications usually have an USB connector because USB is an ubiquitous
+protocol in PCs and smartphones. Whereas inside cars you'll find plenty of CAN
+"buses". Some digital sensors use SPI, others use I2C and others, SMBUS.
+ -->
+<p>アプリケーションごとに違う通信プロトコルを使います。ユーザーが触れるアプリケーションは、通常USBコネクターを持ちます。
+なぜなら、USBは、PCやスマートフォンの至るところで使われているプロトコルだからです。
+一方、車の内部では、多くのCAN「バス」を見つけられます。デジタルセンサにはSPIを使うものがあり、他のものはI2CやSMBUSを使います。</p>
+<hr />
+<!-- So where to next? There are several options: -->
+<p>さて、次はどこでしょう？いくつかの選択肢があります。</p>
+<!-- 
+- You could check out the examples in the [`f3`] board support crate. All those examples work for
+  the STM32F3DISCOVERY board you have.
+ -->
+<ul>
+<li><a href="https://docs.rs/f3"><code>f3</code></a>ボードサポートクレートにある例をチェックできます。全ての例は、STM32F3DISCOVERYボードで動きます。</li>
+</ul>
+<!-- 
+- You could try out [this motion sensors demo][madgwick]. Details about the implementation and
+  source code are available in [this blog post][wd-1-2].
+ -->
+<ul>
+<li><a href="https://mobile.twitter.com/japaricious/status/962770003325005824">このモーションセンサデモ</a>を試すことができます。実装とソースコードについての詳細は、<a href="http://blog.japaric.io/wd-1-2-l3gd20-lsm303dlhc-madgwick/">このブログ</a>にあります。</li>
+</ul>
+<!-- 
+- You could check out [Real Time for The Masses]. A very efficient preemptive multitasking framework
+  that supports task prioritization and dead lock free execution.
+ -->
+<ul>
+<li><a href="https://docs.rs/cortex-m-rtfm">Real Time for The Masses</a>をチェックできます。非常に効率的なプリエンプティブマルチタスクフレームワークです。
+これは、タスクの優先度と、デッドロックしない実行を提供します。</li>
+</ul>
+<!-- 
+- You could try running Rust on a different development board. The easiest way to get started is to
+  use the [`cortex-m-quickstart`] Cargo project template.
+ -->
+<ul>
+<li>Rustを別の開発ボードで動かしてみることができます。最も簡単な方法は、<a href="https://docs.rs/cortex-m-quickstart/0.2.4/cortex_m_quickstart"><code>cortex-m-quickstart</code></a>のCargoプロジェクトテンプレートを使うことです。</li>
+</ul>
+<!-- 
+- You could check out [this blog post][brave-new-io] which describes how Rust type system can
+  prevent bugs in I/O configuration.
+ -->
+<ul>
+<li><a href="http://blog.japaric.io/brave-new-io/">このブログ</a>をチェックできます。このブログは、Rustの型システムがI/O設定のバグを防ぐ方法を説明しています。</li>
+</ul>
+<!-- - You could check out my [blog] for miscellaneous topics about embedded development with Rust. -->
+<ul>
+<li>私の<a href="http://blog.japaric.io">ブログ</a>をチェックできます。Rustを使った組込み開発について、様々なトピックを書いています。</li>
+</ul>
+<!-- 
+- You could check out the [`embedded-hal`] project which aims to build abstractions (traits) for all
+  the embedded I/O functionality commonly found on microcontrollers.
+ -->
+<ul>
+<li><a href="https://github.com/rust-embedded/embedded-hal"><code>embedded-hal</code></a>プロジェクトをチェックできます。このプロジェクトは、
+マイクロコントローラで一般的に用いられる組込みI/O機能に対して、抽象化（トレイト）を構築することを目指しています。</li>
+</ul>
+<!-- 
+- You could join the [Weekly driver initiative] and help us write generic drivers on top of the
+  `embedded-hal` traits and that work for all sorts of platforms (ARM Cortex-M, AVR, MSP430, RISCV,
+  etc.)
+ -->
+<ul>
+<li><a href="https://github.com/rust-lang-nursery/embedded-wg/issues/39">Weekly driver initiative</a>に参加して、<code>embedded-hal</code>トレイト上で汎用ドライバを書く手伝いができます。
+この汎用ドライバは、あらゆる種類のプラットフォーム（ARM Cortex-M、AVR、MSP430、RISCVなど）で動作します。</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="16-punch-o-meter/my-solution.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="appendix/1-general-troubleshooting/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="16-punch-o-meter/my-solution.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="appendix/1-general-troubleshooting/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

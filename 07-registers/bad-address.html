@@ -1,0 +1,399 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>0xBAAAAAAD番地</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="../favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="../favicon.png">
+        
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">導入</a></li><li class="chapter-item expanded "><a href="../01-background/index.html"><strong aria-hidden="true">1.</strong> 背景</a></li><li class="chapter-item expanded "><a href="../02-requirements/index.html"><strong aria-hidden="true">2.</strong> ハードウェア/知識の要求</a></li><li class="chapter-item expanded "><a href="../03-setup/index.html"><strong aria-hidden="true">3.</strong> 開発環境の構築</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../03-setup/linux.html"><strong aria-hidden="true">3.1.</strong> Linux</a></li><li class="chapter-item expanded "><a href="../03-setup/windows.html"><strong aria-hidden="true">3.2.</strong> Windows</a></li><li class="chapter-item expanded "><a href="../03-setup/macos.html"><strong aria-hidden="true">3.3.</strong> macOS</a></li><li class="chapter-item expanded "><a href="../03-setup/verify.html"><strong aria-hidden="true">3.4.</strong> インストールの確認</a></li></ol></li><li class="chapter-item expanded "><a href="../04-meet-your-hardware/index.html"><strong aria-hidden="true">4.</strong> ハードウェアとの出会い</a></li><li class="chapter-item expanded "><a href="../05-led-roulette/index.html"><strong aria-hidden="true">5.</strong> LEDルーレット</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../05-led-roulette/build-it.html"><strong aria-hidden="true">5.1.</strong> ビルド</a></li><li class="chapter-item expanded "><a href="../05-led-roulette/flash-it.html"><strong aria-hidden="true">5.2.</strong> Flashへの書き込み</a></li><li class="chapter-item expanded "><a href="../05-led-roulette/debug-it.html"><strong aria-hidden="true">5.3.</strong> デバッグ</a></li><li class="chapter-item expanded "><a href="../05-led-roulette/the-led-and-delay-abstractions.html"><strong aria-hidden="true">5.4.</strong> ledとdelayの抽象化</a></li><li class="chapter-item expanded "><a href="../05-led-roulette/the-challenge.html"><strong aria-hidden="true">5.5.</strong> 課題</a></li><li class="chapter-item expanded "><a href="../05-led-roulette/my-solution.html"><strong aria-hidden="true">5.6.</strong> 解答例</a></li></ol></li><li class="chapter-item expanded "><a href="../06-hello-world/index.html"><strong aria-hidden="true">6.</strong> Hello, world!</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../06-hello-world/panic.html"><strong aria-hidden="true">6.1.</strong> panic!</a></li></ol></li><li class="chapter-item expanded "><a href="../07-registers/index.html"><strong aria-hidden="true">7.</strong> レジスタ</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../07-registers/rtrm.html"><strong aria-hidden="true">7.1.</strong> RTRM</a></li><li class="chapter-item expanded "><a href="../07-registers/optimization.html"><strong aria-hidden="true">7.2.</strong> (誤った)最適化</a></li><li class="chapter-item expanded "><a href="../07-registers/bad-address.html" class="active"><strong aria-hidden="true">7.3.</strong> 0xBAAAAAAD番地</a></li><li class="chapter-item expanded "><a href="../07-registers/spooky-action-at-a-distance.html"><strong aria-hidden="true">7.4.</strong> 異なる場所での不気味な動作</a></li><li class="chapter-item expanded "><a href="../07-registers/type-safe-manipulation.html"><strong aria-hidden="true">7.5.</strong> 型安全な操作</a></li></ol></li><li class="chapter-item expanded "><a href="../08-leds-again/index.html"><strong aria-hidden="true">8.</strong> LED、再び</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../08-leds-again/power.html"><strong aria-hidden="true">8.1.</strong> 電源</a></li><li class="chapter-item expanded "><a href="../08-leds-again/configuration.html"><strong aria-hidden="true">8.2.</strong> 設定</a></li><li class="chapter-item expanded "><a href="../08-leds-again/the-solution.html"><strong aria-hidden="true">8.3.</strong> 解答例</a></li></ol></li><li class="chapter-item expanded "><a href="../09-clocks-and-timers/index.html"><strong aria-hidden="true">9.</strong> クロックと時間</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../09-clocks-and-timers/for-loop-delays.html"><strong aria-hidden="true">9.1.</strong> forループで遅延</a></li><li class="chapter-item expanded "><a href="../09-clocks-and-timers/nop.html"><strong aria-hidden="true">9.2.</strong> NOP</a></li><li class="chapter-item expanded "><a href="../09-clocks-and-timers/one-shot-timer.html"><strong aria-hidden="true">9.3.</strong> ワンショットタイマ</a></li><li class="chapter-item expanded "><a href="../09-clocks-and-timers/initialization.html"><strong aria-hidden="true">9.4.</strong> 初期化</a></li><li class="chapter-item expanded "><a href="../09-clocks-and-timers/busy-waiting.html"><strong aria-hidden="true">9.5.</strong> ビジーウェイト</a></li><li class="chapter-item expanded "><a href="../09-clocks-and-timers/putting-it-all-together.html"><strong aria-hidden="true">9.6.</strong> 全てをまとめる</a></li></ol></li><li class="chapter-item expanded "><a href="../10-serial-communication/index.html"><strong aria-hidden="true">10.</strong> シリアル通信</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../10-serial-communication/nix-tooling.html"><strong aria-hidden="true">10.1.</strong> *nixのツール</a></li><li class="chapter-item expanded "><a href="../10-serial-communication/windows-tooling.html"><strong aria-hidden="true">10.2.</strong> Windowsのツール</a></li><li class="chapter-item expanded "><a href="../10-serial-communication/loopbacks.html"><strong aria-hidden="true">10.3.</strong> ループバック</a></li></ol></li><li class="chapter-item expanded "><a href="../11-usart/index.html"><strong aria-hidden="true">11.</strong> USART</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../11-usart/send-a-single-byte.html"><strong aria-hidden="true">11.1.</strong> 1バイト送信</a></li><li class="chapter-item expanded "><a href="../11-usart/send-a-string.html"><strong aria-hidden="true">11.2.</strong> 文字列送信</a></li><li class="chapter-item expanded "><a href="../11-usart/buffer-overrun.html"><strong aria-hidden="true">11.3.</strong> バッファオーバーラン</a></li><li class="chapter-item expanded "><a href="../11-usart/uprintln.html"><strong aria-hidden="true">11.4.</strong> uprintln!</a></li><li class="chapter-item expanded "><a href="../11-usart/receive-a-single-byte.html"><strong aria-hidden="true">11.5.</strong> 1バイト受信</a></li><li class="chapter-item expanded "><a href="../11-usart/echo-server.html"><strong aria-hidden="true">11.6.</strong> エコーサーバー</a></li><li class="chapter-item expanded "><a href="../11-usart/reverse-a-string.html"><strong aria-hidden="true">11.7.</strong> 文字列の反転</a></li><li class="chapter-item expanded "><a href="../11-usart/my-solution.html"><strong aria-hidden="true">11.8.</strong> 解答例</a></li></ol></li><li class="chapter-item expanded "><a href="../12-bluetooth-setup/index.html"><strong aria-hidden="true">12.</strong> Bluetooth設定</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../12-bluetooth-setup/linux.html"><strong aria-hidden="true">12.1.</strong> Linux</a></li><li class="chapter-item expanded "><a href="../12-bluetooth-setup/loopback.html"><strong aria-hidden="true">12.2.</strong> ループバック</a></li></ol></li><li class="chapter-item expanded "><a href="../13-serial-over-bluetooth/index.html"><strong aria-hidden="true">13.</strong> Bluetooth経由のシリアル</a></li><li class="chapter-item expanded "><a href="../14-i2c/index.html"><strong aria-hidden="true">14.</strong> I2C</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../14-i2c/the-general-protocol.html"><strong aria-hidden="true">14.1.</strong> 一般的なプロトコル</a></li><li class="chapter-item expanded "><a href="../14-i2c/lsm303dlhc.html"><strong aria-hidden="true">14.2.</strong> LSM303DLHC</a></li><li class="chapter-item expanded "><a href="../14-i2c/read-a-single-register.html"><strong aria-hidden="true">14.3.</strong> 1つのレジスタを読む</a></li><li class="chapter-item expanded "><a href="../14-i2c/the-solution.html"><strong aria-hidden="true">14.4.</strong> 解答例</a></li><li class="chapter-item expanded "><a href="../14-i2c/read-several-registers.html"><strong aria-hidden="true">14.5.</strong> 複数のレジスタを読む</a></li></ol></li><li class="chapter-item expanded "><a href="../15-led-compass/index.html"><strong aria-hidden="true">15.</strong> LEDコンパス</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../15-led-compass/take-1.html"><strong aria-hidden="true">15.1.</strong> 第一弾</a></li><li class="chapter-item expanded "><a href="../15-led-compass/solution-1.html"><strong aria-hidden="true">15.2.</strong> 解答例1</a></li><li class="chapter-item expanded "><a href="../15-led-compass/take-2.html"><strong aria-hidden="true">15.3.</strong> 第二弾</a></li><li class="chapter-item expanded "><a href="../15-led-compass/solution-2.html"><strong aria-hidden="true">15.4.</strong> 解答例2</a></li><li class="chapter-item expanded "><a href="../15-led-compass/magnitude.html"><strong aria-hidden="true">15.5.</strong> 大きさ</a></li><li class="chapter-item expanded "><a href="../15-led-compass/calibration.html"><strong aria-hidden="true">15.6.</strong> キャリブレーション</a></li></ol></li><li class="chapter-item expanded "><a href="../16-punch-o-meter/index.html"><strong aria-hidden="true">16.</strong> パンチングマシン</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../16-punch-o-meter/gravity-is-up.html"><strong aria-hidden="true">16.1.</strong> 重力は上を向いている？</a></li><li class="chapter-item expanded "><a href="../16-punch-o-meter/the-challenge.html"><strong aria-hidden="true">16.2.</strong> 課題</a></li><li class="chapter-item expanded "><a href="../16-punch-o-meter/my-solution.html"><strong aria-hidden="true">16.3.</strong> 解答例</a></li></ol></li><li class="chapter-item expanded "><a href="../explore.html"><strong aria-hidden="true">17.</strong> もっと楽しむために</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="../appendix/1-general-troubleshooting/index.html">トラブルシューティング</a></li><li class="spacer"></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <!-- # `0xBAAAAAAD` address -->
+<h1><a class="header" href="#0xbaaaaaad番地" id="0xbaaaaaad番地"><code>0xBAAAAAAD</code>番地</a></h1>
+<!-- Not all the peripheral memory can be accessed. Look at this program. -->
+<p>全てのペリフェラルメモリがアクセスできるわけではありません。次のプログラムを見て下さい。</p>
+<pre><pre class="playground"><code class="language-rust">#![no_main]
+#![no_std]
+
+use core::ptr;
+
+#[allow(unused_imports)]
+use aux7::{entry, iprint, iprintln};
+
+#[entry]
+fn main() -&gt; ! {
+    aux7::init();
+
+    unsafe {
+        ptr::read_volatile(0x4800_1800 as *const u32);
+    }
+
+    loop {}
+}
+</code></pre></pre>
+<!-- 
+This address is close to the `GPIOE_BSRR` address we used before but this address is *invalid*.
+Invalid in the sense that there's no register at this address.
+ -->
+<p>このアドレスは、以前に使用した<code>GPIOE_BSRR</code>番地に近いですが、<em>不正</em>なアドレスです。
+ここで言う不正とは、そのアドレスにレジスタがないことを意味します。</p>
+<!-- Now, let's try it. -->
+<p>では、次を試してみましょう。</p>
+<pre><code class="language-console">$ cargo run
+Breakpoint 3, main () at src/07-registers/src/main.rs:9
+9           aux7::init();
+
+(gdb) continue
+Continuing.
+
+Breakpoint 2, UserHardFault_ (ef=0x10001fc0)
+    at $REGISTRY/cortex-m-rt-0.6.3/src/lib.rs:535
+535         loop {
+</code></pre>
+<!-- 
+We tried to do an invalid operation, reading memory that doesn't exist, so the processor raised an
+*exception*, a *hardware* exception.
+ -->
+<p>不正な操作を試しました。存在していないメモリを読み込んだ結果、プロセッサは<em>例外</em>、つまり<em>ハードウェア例外</em>を発生させました。</p>
+<!-- 
+In most cases, exceptions are raised when the processor attempts to perform an invalid operation.
+Exceptions break the normal flow of a program and force the processor to execute an *exception
+handler*, which is just a function/subroutine.
+ -->
+<p>多くの場合、例外はプロセッサが不正な操作を実行しようとした時に発生します。
+例外はプログラムの通常実行フローを停止し、プロセッサに<em>例外ハンドラ</em>を実行させます。
+例外ハンドラは、1つの関数/サブルーチンです。</p>
+<!-- 
+There are different kind of exceptions. Each kind of exception is raised by different conditions and
+each one is handled by a different exception handler.
+ -->
+<p>異なる種類の例外が存在します。各種の例外は、異なる条件で発生し、各々が異なる例外ハンドラで処理されます。</p>
+<!-- 
+The `aux7` crate depends on the `cortex-m-rt` crate which defines a default
+*hard fault* handler, named `UserHardFault`, that handles the "invalid memory
+address" exception. `openocd.gdb` placed a breakpoint on `HardFault`; that's why
+the debugger halted your program while it was executing the exception handler.
+We can get more information about the exception from the debugger. Let's see:
+ -->
+<p><code>aux7</code>クレートは、<code>cortex-m-rt</code>クレートに依存しています。<code>cortex-m-rt</code>クレートは、
+<code>UserHardFault</code>と言うデフォルトの<em>ハードフォルトハンドラ</em>を定義しており、「不正なメモリアドレス」例外を処理します。
+<code>openocd.gdb</code>は、<code>HardFault</code>にブレークポイントを設置しています。
+そのため、デバッガは、例外ハンドラを実行するところでプログラムを停止しました。
+デバッガから、例外に関するさらなる情報を得ることができます。見ていきましょう。</p>
+<pre><code>(gdb) list
+530
+531     #[allow(unused_variables)]
+532     #[doc(hidden)]
+533     #[no_mangle]
+534     pub unsafe extern &quot;C&quot; fn UserHardFault_(ef: &amp;ExceptionFrame) -&gt; ! {
+535         loop {
+536             // add some side effect to prevent this from turning into a UDF instruction
+537             // see rust-lang/rust#28728 for details
+538             atomic::compiler_fence(Ordering::SeqCst);
+539         }
+</code></pre>
+<!-- 
+`ef` is a snapshot of the program state right before the exception occurred. Let's inspect it:
+ -->
+<p><code>ef</code>は、例外が発生する直前のプログラムの状態のスナップショットです。中身を調べてみましょう。</p>
+<pre><code>(gdb) print/x *ef
+$1 = cortex_m_rt::ExceptionFrame {
+  r0: 0x48001800,
+  r1: 0x48001800,
+  r2: 0xb,
+  r3: 0xc,
+  r12: 0xd,
+  lr: 0x800019f,
+  pc: 0x80028d6,
+  xpsr: 0x1000000
+}
+</code></pre>
+<!-- 
+There are several fields here but the most important one is `pc`, the Program Counter register.
+The address in this register points to the instruction that generated the exception. Let's
+disassemble the program around the bad instruction.
+ -->
+<p>いくつかのフィールドがありますが、最も重要なものはプログラムカウンタレジスタの<code>pc</code>です。
+このレジスタのアドレスは、例外を発生させた命令を指しています。
+不正な命令の周辺プログラムを逆アセンブルしてみましょう。</p>
+<pre><code>(gdb) disassemble /m ef.pc
+Dump of assembler code for function core::ptr::read_volatile:
+471     /checkout/src/libcore/ptr.rs: No such file or directory.
+   0x080028ce &lt;+0&gt;:     sub     sp, #16
+   0x080028d0 &lt;+2&gt;:     mov     r1, r0
+   0x080028d2 &lt;+4&gt;:     str     r0, [sp, #8]
+
+472     in /checkout/src/libcore/ptr.rs
+   0x080028d4 &lt;+6&gt;:     ldr     r0, [sp, #8]
+   0x080028d6 &lt;+8&gt;:     ldr     r0, [r0, #0]
+   0x080028d8 &lt;+10&gt;:    str     r0, [sp, #12]
+   0x080028da &lt;+12&gt;:    ldr     r0, [sp, #12]
+   0x080028dc &lt;+14&gt;:    str     r1, [sp, #4]
+   0x080028de &lt;+16&gt;:    str     r0, [sp, #0]
+   0x080028e0 &lt;+18&gt;:    b.n     0x80028e2 &lt;core::ptr::read_volatile+20&gt;
+
+473     in /checkout/src/libcore/ptr.rs
+   0x080028e2 &lt;+20&gt;:    ldr     r0, [sp, #0]
+   0x080028e4 &lt;+22&gt;:    add     sp, #16
+   0x080028e6 &lt;+24&gt;:    bx      lr
+
+End of assembler dump.
+</code></pre>
+<!-- 
+The exception was caused by the `ldr r0, [r0, #0]` instruction, a read instruction. The instruction
+tried to read the memory at the address indicated by the `r0` register. By the way, `r0` is a CPU
+(processor) register not a memory mapped register; it doesn't have an associated address like, say,
+`GPIO_BSRR`.
+ -->
+<p>例外は、読み込み命令の<code>ldr r0, [r0, #0]</code>が原因です。この命令は、<code>r0</code>レジスタが指しているアドレスのメモリを読もうとします。
+ところで、<code>r0</code>は、CPU（プロセッサ）レジスタで、メモリマップドレジスタではありません。
+つまり、このレジスタは、<code>GPIO_BSRR</code>のようなアドレスとは、関係がありません。</p>
+<!-- 
+Wouldn't it be nice if we could check what the value of the `r0` register was right at the instant
+when the exception was raised? Well, we already did! The `r0` field in the `ef` value we printed
+before is the value of `r0` register had when the exception was raised. Here it is again:
+ -->
+<p>例外が発生した時の<code>r0</code>レジスタの値が確認できると、良いと思いませんか？
+既に確認できています！
+ここまでに表示した<code>ef</code>の<code>r0</code>フィールドの値が、例外発生時の<code>r0</code>レジスタの値です。再掲載します。</p>
+<pre><code>(gdb) p/x *ef
+$1 = cortex_m_rt::ExceptionFrame {
+  r0: 0x48001800,
+  r1: 0x48001800,
+  r2: 0xb,
+  r3: 0xc,
+  r12: 0xd,
+  lr: 0x800019f,
+  pc: 0x80028d6,
+  xpsr: 0x1000000
+}
+</code></pre>
+<!-- 
+`r0` contains the value `0x4800_1800` which is the invalid address we called the `read_volatile`
+function with.
+ -->
+<p><code>r0</code>は、<code>0x4800_1800</code>という値になっています。これは、<code>read_volatile</code>関数を呼ぶ時に指定した不正なアドレスです。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../07-registers/optimization.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../07-registers/spooky-action-at-a-distance.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../07-registers/optimization.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../07-registers/spooky-action-at-a-distance.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

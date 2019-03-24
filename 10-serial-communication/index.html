@@ -1,0 +1,320 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>シリアル通信</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="../favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="../favicon.png">
+        
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">導入</a></li><li class="chapter-item expanded "><a href="../01-background/index.html"><strong aria-hidden="true">1.</strong> 背景</a></li><li class="chapter-item expanded "><a href="../02-requirements/index.html"><strong aria-hidden="true">2.</strong> ハードウェア/知識の要求</a></li><li class="chapter-item expanded "><a href="../03-setup/index.html"><strong aria-hidden="true">3.</strong> 開発環境の構築</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../03-setup/linux.html"><strong aria-hidden="true">3.1.</strong> Linux</a></li><li class="chapter-item expanded "><a href="../03-setup/windows.html"><strong aria-hidden="true">3.2.</strong> Windows</a></li><li class="chapter-item expanded "><a href="../03-setup/macos.html"><strong aria-hidden="true">3.3.</strong> macOS</a></li><li class="chapter-item expanded "><a href="../03-setup/verify.html"><strong aria-hidden="true">3.4.</strong> インストールの確認</a></li></ol></li><li class="chapter-item expanded "><a href="../04-meet-your-hardware/index.html"><strong aria-hidden="true">4.</strong> ハードウェアとの出会い</a></li><li class="chapter-item expanded "><a href="../05-led-roulette/index.html"><strong aria-hidden="true">5.</strong> LEDルーレット</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../05-led-roulette/build-it.html"><strong aria-hidden="true">5.1.</strong> ビルド</a></li><li class="chapter-item expanded "><a href="../05-led-roulette/flash-it.html"><strong aria-hidden="true">5.2.</strong> Flashへの書き込み</a></li><li class="chapter-item expanded "><a href="../05-led-roulette/debug-it.html"><strong aria-hidden="true">5.3.</strong> デバッグ</a></li><li class="chapter-item expanded "><a href="../05-led-roulette/the-led-and-delay-abstractions.html"><strong aria-hidden="true">5.4.</strong> ledとdelayの抽象化</a></li><li class="chapter-item expanded "><a href="../05-led-roulette/the-challenge.html"><strong aria-hidden="true">5.5.</strong> 課題</a></li><li class="chapter-item expanded "><a href="../05-led-roulette/my-solution.html"><strong aria-hidden="true">5.6.</strong> 解答例</a></li></ol></li><li class="chapter-item expanded "><a href="../06-hello-world/index.html"><strong aria-hidden="true">6.</strong> Hello, world!</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../06-hello-world/panic.html"><strong aria-hidden="true">6.1.</strong> panic!</a></li></ol></li><li class="chapter-item expanded "><a href="../07-registers/index.html"><strong aria-hidden="true">7.</strong> レジスタ</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../07-registers/rtrm.html"><strong aria-hidden="true">7.1.</strong> RTRM</a></li><li class="chapter-item expanded "><a href="../07-registers/optimization.html"><strong aria-hidden="true">7.2.</strong> (誤った)最適化</a></li><li class="chapter-item expanded "><a href="../07-registers/bad-address.html"><strong aria-hidden="true">7.3.</strong> 0xBAAAAAAD番地</a></li><li class="chapter-item expanded "><a href="../07-registers/spooky-action-at-a-distance.html"><strong aria-hidden="true">7.4.</strong> 異なる場所での不気味な動作</a></li><li class="chapter-item expanded "><a href="../07-registers/type-safe-manipulation.html"><strong aria-hidden="true">7.5.</strong> 型安全な操作</a></li></ol></li><li class="chapter-item expanded "><a href="../08-leds-again/index.html"><strong aria-hidden="true">8.</strong> LED、再び</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../08-leds-again/power.html"><strong aria-hidden="true">8.1.</strong> 電源</a></li><li class="chapter-item expanded "><a href="../08-leds-again/configuration.html"><strong aria-hidden="true">8.2.</strong> 設定</a></li><li class="chapter-item expanded "><a href="../08-leds-again/the-solution.html"><strong aria-hidden="true">8.3.</strong> 解答例</a></li></ol></li><li class="chapter-item expanded "><a href="../09-clocks-and-timers/index.html"><strong aria-hidden="true">9.</strong> クロックと時間</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../09-clocks-and-timers/for-loop-delays.html"><strong aria-hidden="true">9.1.</strong> forループで遅延</a></li><li class="chapter-item expanded "><a href="../09-clocks-and-timers/nop.html"><strong aria-hidden="true">9.2.</strong> NOP</a></li><li class="chapter-item expanded "><a href="../09-clocks-and-timers/one-shot-timer.html"><strong aria-hidden="true">9.3.</strong> ワンショットタイマ</a></li><li class="chapter-item expanded "><a href="../09-clocks-and-timers/initialization.html"><strong aria-hidden="true">9.4.</strong> 初期化</a></li><li class="chapter-item expanded "><a href="../09-clocks-and-timers/busy-waiting.html"><strong aria-hidden="true">9.5.</strong> ビジーウェイト</a></li><li class="chapter-item expanded "><a href="../09-clocks-and-timers/putting-it-all-together.html"><strong aria-hidden="true">9.6.</strong> 全てをまとめる</a></li></ol></li><li class="chapter-item expanded "><a href="../10-serial-communication/index.html" class="active"><strong aria-hidden="true">10.</strong> シリアル通信</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../10-serial-communication/nix-tooling.html"><strong aria-hidden="true">10.1.</strong> *nixのツール</a></li><li class="chapter-item expanded "><a href="../10-serial-communication/windows-tooling.html"><strong aria-hidden="true">10.2.</strong> Windowsのツール</a></li><li class="chapter-item expanded "><a href="../10-serial-communication/loopbacks.html"><strong aria-hidden="true">10.3.</strong> ループバック</a></li></ol></li><li class="chapter-item expanded "><a href="../11-usart/index.html"><strong aria-hidden="true">11.</strong> USART</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../11-usart/send-a-single-byte.html"><strong aria-hidden="true">11.1.</strong> 1バイト送信</a></li><li class="chapter-item expanded "><a href="../11-usart/send-a-string.html"><strong aria-hidden="true">11.2.</strong> 文字列送信</a></li><li class="chapter-item expanded "><a href="../11-usart/buffer-overrun.html"><strong aria-hidden="true">11.3.</strong> バッファオーバーラン</a></li><li class="chapter-item expanded "><a href="../11-usart/uprintln.html"><strong aria-hidden="true">11.4.</strong> uprintln!</a></li><li class="chapter-item expanded "><a href="../11-usart/receive-a-single-byte.html"><strong aria-hidden="true">11.5.</strong> 1バイト受信</a></li><li class="chapter-item expanded "><a href="../11-usart/echo-server.html"><strong aria-hidden="true">11.6.</strong> エコーサーバー</a></li><li class="chapter-item expanded "><a href="../11-usart/reverse-a-string.html"><strong aria-hidden="true">11.7.</strong> 文字列の反転</a></li><li class="chapter-item expanded "><a href="../11-usart/my-solution.html"><strong aria-hidden="true">11.8.</strong> 解答例</a></li></ol></li><li class="chapter-item expanded "><a href="../12-bluetooth-setup/index.html"><strong aria-hidden="true">12.</strong> Bluetooth設定</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../12-bluetooth-setup/linux.html"><strong aria-hidden="true">12.1.</strong> Linux</a></li><li class="chapter-item expanded "><a href="../12-bluetooth-setup/loopback.html"><strong aria-hidden="true">12.2.</strong> ループバック</a></li></ol></li><li class="chapter-item expanded "><a href="../13-serial-over-bluetooth/index.html"><strong aria-hidden="true">13.</strong> Bluetooth経由のシリアル</a></li><li class="chapter-item expanded "><a href="../14-i2c/index.html"><strong aria-hidden="true">14.</strong> I2C</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../14-i2c/the-general-protocol.html"><strong aria-hidden="true">14.1.</strong> 一般的なプロトコル</a></li><li class="chapter-item expanded "><a href="../14-i2c/lsm303dlhc.html"><strong aria-hidden="true">14.2.</strong> LSM303DLHC</a></li><li class="chapter-item expanded "><a href="../14-i2c/read-a-single-register.html"><strong aria-hidden="true">14.3.</strong> 1つのレジスタを読む</a></li><li class="chapter-item expanded "><a href="../14-i2c/the-solution.html"><strong aria-hidden="true">14.4.</strong> 解答例</a></li><li class="chapter-item expanded "><a href="../14-i2c/read-several-registers.html"><strong aria-hidden="true">14.5.</strong> 複数のレジスタを読む</a></li></ol></li><li class="chapter-item expanded "><a href="../15-led-compass/index.html"><strong aria-hidden="true">15.</strong> LEDコンパス</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../15-led-compass/take-1.html"><strong aria-hidden="true">15.1.</strong> 第一弾</a></li><li class="chapter-item expanded "><a href="../15-led-compass/solution-1.html"><strong aria-hidden="true">15.2.</strong> 解答例1</a></li><li class="chapter-item expanded "><a href="../15-led-compass/take-2.html"><strong aria-hidden="true">15.3.</strong> 第二弾</a></li><li class="chapter-item expanded "><a href="../15-led-compass/solution-2.html"><strong aria-hidden="true">15.4.</strong> 解答例2</a></li><li class="chapter-item expanded "><a href="../15-led-compass/magnitude.html"><strong aria-hidden="true">15.5.</strong> 大きさ</a></li><li class="chapter-item expanded "><a href="../15-led-compass/calibration.html"><strong aria-hidden="true">15.6.</strong> キャリブレーション</a></li></ol></li><li class="chapter-item expanded "><a href="../16-punch-o-meter/index.html"><strong aria-hidden="true">16.</strong> パンチングマシン</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../16-punch-o-meter/gravity-is-up.html"><strong aria-hidden="true">16.1.</strong> 重力は上を向いている？</a></li><li class="chapter-item expanded "><a href="../16-punch-o-meter/the-challenge.html"><strong aria-hidden="true">16.2.</strong> 課題</a></li><li class="chapter-item expanded "><a href="../16-punch-o-meter/my-solution.html"><strong aria-hidden="true">16.3.</strong> 解答例</a></li></ol></li><li class="chapter-item expanded "><a href="../explore.html"><strong aria-hidden="true">17.</strong> もっと楽しむために</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="../appendix/1-general-troubleshooting/index.html">トラブルシューティング</a></li><li class="spacer"></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <!-- # Serial communication -->
+<h1><a class="header" href="#シリアル通信" id="シリアル通信">シリアル通信</a></h1>
+<a href="https://en.wikipedia.org/wiki/File:Serial_port.jpg">
+<p align="center">
+<img height="240" title="Standard serial port connector DE-9" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Serial_port.jpg/800px-Serial_port.jpg">
+</p>
+</a>
+<!-- 
+<p align="center">
+<em>This is what we'll be using. I hope your laptop has one!</em>
+</p>
+ -->
+<p align="center">
+<em>これが、これから使うものです！あなたのラップトップにも1つ付いていると良いのですが！</em>
+</p>
+<!-- 
+Nah, don't worry. This connector, the DE-9, went out of fashion on PCs quite some time ago; it got
+replaced by the Universal Serial Bus (USB). We won't be dealing with the DE-9 connector itself but
+with the communication protocol that this cable is/was usually used for.
+ -->
+<p>冗談です、心配しないで下さい。このDE-9というコネクターは、かなり昔にPCでは時代遅れになり、USB（Universal Serial Bus）に置き換わりました。
+DE-9コネクタ自体を扱うことはしませんが、このケーブルで使われている/使われていた通信プロトコルを使います。</p>
+<!-- 
+So what's this *serial communication*? It's an *asynchronous* communication protocol where two
+devices exchange data *serially*, as in one bit at a time, using two data lines (plus a common
+ground). The protocol is asynchronous in the sense that neither of the shared lines carries a clock
+signal. Instead both parties must agree on how fast data will be sent along the wire *before* the
+communication occurs. This protocol allows *duplex* communication as data can be sent from A to B
+and from B to A simultaneously.
+ -->
+<p><em>シリアル通信</em>とは何なのでしょうか？それは、2本のデータ線（と共通のグランド）を使って、
+2つのデバイスが1回に1ビットずつ<em>逐次に</em>データ交換する<em>非同期</em>通信プロトコルです。
+このプロトコルは、どちらの共有線もクロック信号を伝送しない、という意味で非同期です。
+代わりに、双方の当事者は、通信が行われる<em>前に</em>、ワイヤに流れるデータの送信速度について合意する必要があります。
+このプロトコルは、<em>双方向の</em>通信が可能です。データは、AからBへ、BからAへ、同時に送信することができます。</p>
+<!-- 
+We'll be using this protocol to exchange data between the microcontroller and your laptop. In
+contrast to the ITM protocol we have used before, with the serial communication protocol you can
+send data from your laptop to the microcontroller.
+ -->
+<p>このプロトコルを、マイクロコントローラとノートPCとの間のデータ交換に使用します。
+これまでに使ったITMプロトコルと違って、シリアル通信プロトコルでは、ノートPCからマイクロコントローラにデータを送ることができます。</p>
+<!-- 
+The next practical question you probably want to ask is: How fast can we send data through this
+protocol?
+ -->
+<p>次に尋ねたいと思うであろう実用上の質問は、このプロトコルではどのくらいの速度でデータを送信できるのか？ということでしょう。</p>
+<!-- 
+This protocol works with frames. Each frame has one *start* bit, 5 to 9 bits of payload (data) and 1
+to 2 *stop bits*. The speed of the protocol is known as *baud rate* and it's quoted in bits per
+second (bps). Common baud rates are: 9600, 19200, 38400, 57600 and 115200 bps.
+ -->
+<p>このプロトコルは、フレームで動作します。各フレームは、1つの<em>開始</em>ビット、5から9ビットのペイロード（データ）と、1か2ビットの<em>終了ビット</em>を持ちます。
+プロトコルの速度は、<em>ボーレート</em>と呼ばれており、ビット毎秒（bps）として示されます。
+一般的なボーレートは、9600、19200、38400、57600、115200です。</p>
+<!-- 
+To actually answer the question: With a common configuration of 1 start bit, 8 bits of data, 1
+stop bit and a baud rate of 115200 bps one can, in theory, send 11,520 frames per second. Since each
+one frame carries a byte of data that results in a data rate of 11.52 KB/s. In practice, the data
+rate will probably be lower because of processing times on the slower side of the communication (the
+microcontroller).
+ -->
+<p>実際に質問に答えると、一般的な設定の開始ビット1ビット、データビット8ビット、終了ビット1ビットでボーレートが115200 bpsであれば、
+理論上は、毎秒11,520フレーム送信することが可能です。
+各1フレームは、1バイトのデータを伝送するため、11.52KB/秒というデータレートになります。実際には、データレートは、より低くなります。
+なぜなら、通信しているより遅い側（マイクロコントローラ）の処理時間があるためです。</p>
+<!-- 
+Today's laptops/PCs don't support the serial communication protocol. So you can't directly connect
+your laptop to the microcontroller. But that's where the serial module comes in. This module will
+sit between the two and expose a serial interface to the microcontroller and an USB interface to
+your laptop. The microcontroller will see your laptop as another serial device and your laptop
+will see the microcontroller as a virtual serial device.
+ -->
+<p>現在のノートPC/PCは、シリアル通信のプロトコルをサポートしていません。そのため、ノートPCを直接マイクロコントローラに接続することはできません。
+しかし、そこでシリアルモジュールの出番です。このモジュールは、2つの機器の間に入り、マイクロコントローラにシリアルインタフェースを、
+ノートPCにUSBインタフェースを用意します。
+マイクロコントローラは、ノートPCを別のシリアルデバイスとして見るでしょう。そして、ノートPCは、マイクロコントローラを仮想シリアルデバイスとして見ます。</p>
+<!-- 
+Now, let's get familiar with the serial module and the serial communication tools that your OS
+offers. Pick a route:
+ -->
+<p>それでは、シリアルモジュールと使用しているOSが提供するシリアル通信ツールについて、詳しく学びましょう。ルートを選んで下さい。</p>
+<ul>
+<li><a href="nix-tooling.html">*nix</a></li>
+<li><a href="windows-tooling.html">Windows</a></li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../09-clocks-and-timers/putting-it-all-together.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../10-serial-communication/nix-tooling.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../09-clocks-and-timers/putting-it-all-together.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../10-serial-communication/nix-tooling.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

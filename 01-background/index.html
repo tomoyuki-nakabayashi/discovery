@@ -1,0 +1,347 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>背景</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="../favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="../favicon.png">
+        
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">導入</a></li><li class="chapter-item expanded "><a href="../01-background/index.html" class="active"><strong aria-hidden="true">1.</strong> 背景</a></li><li class="chapter-item expanded "><a href="../02-requirements/index.html"><strong aria-hidden="true">2.</strong> ハードウェア/知識の要求</a></li><li class="chapter-item expanded "><a href="../03-setup/index.html"><strong aria-hidden="true">3.</strong> 開発環境の構築</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../03-setup/linux.html"><strong aria-hidden="true">3.1.</strong> Linux</a></li><li class="chapter-item expanded "><a href="../03-setup/windows.html"><strong aria-hidden="true">3.2.</strong> Windows</a></li><li class="chapter-item expanded "><a href="../03-setup/macos.html"><strong aria-hidden="true">3.3.</strong> macOS</a></li><li class="chapter-item expanded "><a href="../03-setup/verify.html"><strong aria-hidden="true">3.4.</strong> インストールの確認</a></li></ol></li><li class="chapter-item expanded "><a href="../04-meet-your-hardware/index.html"><strong aria-hidden="true">4.</strong> ハードウェアとの出会い</a></li><li class="chapter-item expanded "><a href="../05-led-roulette/index.html"><strong aria-hidden="true">5.</strong> LEDルーレット</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../05-led-roulette/build-it.html"><strong aria-hidden="true">5.1.</strong> ビルド</a></li><li class="chapter-item expanded "><a href="../05-led-roulette/flash-it.html"><strong aria-hidden="true">5.2.</strong> Flashへの書き込み</a></li><li class="chapter-item expanded "><a href="../05-led-roulette/debug-it.html"><strong aria-hidden="true">5.3.</strong> デバッグ</a></li><li class="chapter-item expanded "><a href="../05-led-roulette/the-led-and-delay-abstractions.html"><strong aria-hidden="true">5.4.</strong> ledとdelayの抽象化</a></li><li class="chapter-item expanded "><a href="../05-led-roulette/the-challenge.html"><strong aria-hidden="true">5.5.</strong> 課題</a></li><li class="chapter-item expanded "><a href="../05-led-roulette/my-solution.html"><strong aria-hidden="true">5.6.</strong> 解答例</a></li></ol></li><li class="chapter-item expanded "><a href="../06-hello-world/index.html"><strong aria-hidden="true">6.</strong> Hello, world!</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../06-hello-world/panic.html"><strong aria-hidden="true">6.1.</strong> panic!</a></li></ol></li><li class="chapter-item expanded "><a href="../07-registers/index.html"><strong aria-hidden="true">7.</strong> レジスタ</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../07-registers/rtrm.html"><strong aria-hidden="true">7.1.</strong> RTRM</a></li><li class="chapter-item expanded "><a href="../07-registers/optimization.html"><strong aria-hidden="true">7.2.</strong> (誤った)最適化</a></li><li class="chapter-item expanded "><a href="../07-registers/bad-address.html"><strong aria-hidden="true">7.3.</strong> 0xBAAAAAAD番地</a></li><li class="chapter-item expanded "><a href="../07-registers/spooky-action-at-a-distance.html"><strong aria-hidden="true">7.4.</strong> 異なる場所での不気味な動作</a></li><li class="chapter-item expanded "><a href="../07-registers/type-safe-manipulation.html"><strong aria-hidden="true">7.5.</strong> 型安全な操作</a></li></ol></li><li class="chapter-item expanded "><a href="../08-leds-again/index.html"><strong aria-hidden="true">8.</strong> LED、再び</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../08-leds-again/power.html"><strong aria-hidden="true">8.1.</strong> 電源</a></li><li class="chapter-item expanded "><a href="../08-leds-again/configuration.html"><strong aria-hidden="true">8.2.</strong> 設定</a></li><li class="chapter-item expanded "><a href="../08-leds-again/the-solution.html"><strong aria-hidden="true">8.3.</strong> 解答例</a></li></ol></li><li class="chapter-item expanded "><a href="../09-clocks-and-timers/index.html"><strong aria-hidden="true">9.</strong> クロックと時間</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../09-clocks-and-timers/for-loop-delays.html"><strong aria-hidden="true">9.1.</strong> forループで遅延</a></li><li class="chapter-item expanded "><a href="../09-clocks-and-timers/nop.html"><strong aria-hidden="true">9.2.</strong> NOP</a></li><li class="chapter-item expanded "><a href="../09-clocks-and-timers/one-shot-timer.html"><strong aria-hidden="true">9.3.</strong> ワンショットタイマ</a></li><li class="chapter-item expanded "><a href="../09-clocks-and-timers/initialization.html"><strong aria-hidden="true">9.4.</strong> 初期化</a></li><li class="chapter-item expanded "><a href="../09-clocks-and-timers/busy-waiting.html"><strong aria-hidden="true">9.5.</strong> ビジーウェイト</a></li><li class="chapter-item expanded "><a href="../09-clocks-and-timers/putting-it-all-together.html"><strong aria-hidden="true">9.6.</strong> 全てをまとめる</a></li></ol></li><li class="chapter-item expanded "><a href="../10-serial-communication/index.html"><strong aria-hidden="true">10.</strong> シリアル通信</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../10-serial-communication/nix-tooling.html"><strong aria-hidden="true">10.1.</strong> *nixのツール</a></li><li class="chapter-item expanded "><a href="../10-serial-communication/windows-tooling.html"><strong aria-hidden="true">10.2.</strong> Windowsのツール</a></li><li class="chapter-item expanded "><a href="../10-serial-communication/loopbacks.html"><strong aria-hidden="true">10.3.</strong> ループバック</a></li></ol></li><li class="chapter-item expanded "><a href="../11-usart/index.html"><strong aria-hidden="true">11.</strong> USART</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../11-usart/send-a-single-byte.html"><strong aria-hidden="true">11.1.</strong> 1バイト送信</a></li><li class="chapter-item expanded "><a href="../11-usart/send-a-string.html"><strong aria-hidden="true">11.2.</strong> 文字列送信</a></li><li class="chapter-item expanded "><a href="../11-usart/buffer-overrun.html"><strong aria-hidden="true">11.3.</strong> バッファオーバーラン</a></li><li class="chapter-item expanded "><a href="../11-usart/uprintln.html"><strong aria-hidden="true">11.4.</strong> uprintln!</a></li><li class="chapter-item expanded "><a href="../11-usart/receive-a-single-byte.html"><strong aria-hidden="true">11.5.</strong> 1バイト受信</a></li><li class="chapter-item expanded "><a href="../11-usart/echo-server.html"><strong aria-hidden="true">11.6.</strong> エコーサーバー</a></li><li class="chapter-item expanded "><a href="../11-usart/reverse-a-string.html"><strong aria-hidden="true">11.7.</strong> 文字列の反転</a></li><li class="chapter-item expanded "><a href="../11-usart/my-solution.html"><strong aria-hidden="true">11.8.</strong> 解答例</a></li></ol></li><li class="chapter-item expanded "><a href="../12-bluetooth-setup/index.html"><strong aria-hidden="true">12.</strong> Bluetooth設定</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../12-bluetooth-setup/linux.html"><strong aria-hidden="true">12.1.</strong> Linux</a></li><li class="chapter-item expanded "><a href="../12-bluetooth-setup/loopback.html"><strong aria-hidden="true">12.2.</strong> ループバック</a></li></ol></li><li class="chapter-item expanded "><a href="../13-serial-over-bluetooth/index.html"><strong aria-hidden="true">13.</strong> Bluetooth経由のシリアル</a></li><li class="chapter-item expanded "><a href="../14-i2c/index.html"><strong aria-hidden="true">14.</strong> I2C</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../14-i2c/the-general-protocol.html"><strong aria-hidden="true">14.1.</strong> 一般的なプロトコル</a></li><li class="chapter-item expanded "><a href="../14-i2c/lsm303dlhc.html"><strong aria-hidden="true">14.2.</strong> LSM303DLHC</a></li><li class="chapter-item expanded "><a href="../14-i2c/read-a-single-register.html"><strong aria-hidden="true">14.3.</strong> 1つのレジスタを読む</a></li><li class="chapter-item expanded "><a href="../14-i2c/the-solution.html"><strong aria-hidden="true">14.4.</strong> 解答例</a></li><li class="chapter-item expanded "><a href="../14-i2c/read-several-registers.html"><strong aria-hidden="true">14.5.</strong> 複数のレジスタを読む</a></li></ol></li><li class="chapter-item expanded "><a href="../15-led-compass/index.html"><strong aria-hidden="true">15.</strong> LEDコンパス</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../15-led-compass/take-1.html"><strong aria-hidden="true">15.1.</strong> 第一弾</a></li><li class="chapter-item expanded "><a href="../15-led-compass/solution-1.html"><strong aria-hidden="true">15.2.</strong> 解答例1</a></li><li class="chapter-item expanded "><a href="../15-led-compass/take-2.html"><strong aria-hidden="true">15.3.</strong> 第二弾</a></li><li class="chapter-item expanded "><a href="../15-led-compass/solution-2.html"><strong aria-hidden="true">15.4.</strong> 解答例2</a></li><li class="chapter-item expanded "><a href="../15-led-compass/magnitude.html"><strong aria-hidden="true">15.5.</strong> 大きさ</a></li><li class="chapter-item expanded "><a href="../15-led-compass/calibration.html"><strong aria-hidden="true">15.6.</strong> キャリブレーション</a></li></ol></li><li class="chapter-item expanded "><a href="../16-punch-o-meter/index.html"><strong aria-hidden="true">16.</strong> パンチングマシン</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../16-punch-o-meter/gravity-is-up.html"><strong aria-hidden="true">16.1.</strong> 重力は上を向いている？</a></li><li class="chapter-item expanded "><a href="../16-punch-o-meter/the-challenge.html"><strong aria-hidden="true">16.2.</strong> 課題</a></li><li class="chapter-item expanded "><a href="../16-punch-o-meter/my-solution.html"><strong aria-hidden="true">16.3.</strong> 解答例</a></li></ol></li><li class="chapter-item expanded "><a href="../explore.html"><strong aria-hidden="true">17.</strong> もっと楽しむために</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="../appendix/1-general-troubleshooting/index.html">トラブルシューティング</a></li><li class="spacer"></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <!-- # Background -->
+<h1><a class="header" href="#背景" id="背景">背景</a></h1>
+<!-- ## What's a microcontroller? -->
+<h2><a class="header" href="#マイクロコントローラとは何でしょうか" id="マイクロコントローラとは何でしょうか">マイクロコントローラとは何でしょうか？</a></h2>
+<!-- 
+A microcontroller is a *system* on a chip. Whereas your laptop is made up of several discrete
+components: a processor, RAM sticks, a hard drive, an ethernet port, etc.; a microcontroller has all
+those components built into a single "chip" or package. This makes it possible to build systems with
+minimal part count.
+ -->
+<p>マイクロコントローラは、1チップ上の<em>システム</em>です。
+一方、あなたのノートPCは、プロセッサ、RAMスティック、ハードディスクドライブ、イーサーネットポートなど、いくつかの個別の部品で構成されています。
+マイクロコントローラは、それらの構成部品を1つの「チップ」またはパッケージ内に組み込みます。
+このことにより、最小限の部品数からなるシステムを構築することが可能になります。</p>
+<!-- ## What can you do with a microcontroller? -->
+<h2><a class="header" href="#マイクロコントローラで何ができるのでしょうか" id="マイクロコントローラで何ができるのでしょうか">マイクロコントローラで何ができるのでしょうか？</a></h2>
+<!-- 
+Lots of things! Microcontrollers are the central part of systems known as *embedded* systems. These
+systems are everywhere but you don't usually notice them. These systems control the brakes of your
+car, wash your clothes, print your documents, keep you warm, keep you cool, optimize the fuel
+consumption of your car, etc.
+ -->
+<p>たくさんのことができます！マイクロコントローラは<em>組込み</em>システムとして知られるシステムの中心を担う部品です。
+組込みシステムはどこにでもありますが、通常それらを意識することはありません。組込みシステムは車のブレーキを制御したり、
+衣服を洗濯したり、ドキュメントを印刷したり、冷暖房を制御したり、車の燃料消費を最適化したりします。</p>
+<!-- 
+The main trait of these systems is that they operate without user intervention even if they expose a
+user interface like a washing machine does; most of their operation is done on their own.
+ -->
+<p>組込みシステムの主な特徴は、洗濯機のようにユーザーインタフェースがある場合でさえ、ユーザーの介入なしに動作することです。
+ほとんどの動作は、組込みシステム自身で完結します。</p>
+<!-- 
+The other common trait of these systems is that they *control* a process. And for that these systems
+usually have one or more sensors and one or more actuators. For example, an HVAC system has several
+sensors, thermometers and humidity sensors spread across some area, and several actuators as well,
+heating elements and fans connected to ducts.
+ -->
+<p>組込みシステムの他の特徴としては、プロセスを<em>制御</em>することです。このために組込みシステムは、通常、1つ以上のセンサとアクチュエータを持ちます。
+例えば、空調システムは、点在する温度計や湿度計といったセンサと、発熱体やダクトに接続されたファンのようなアクチュエータを持ちます。</p>
+<!-- ## When should I use a microcontroller? -->
+<h2><a class="header" href="#マイクロコントローラを使うべきなのはいつでしょうか" id="マイクロコントローラを使うべきなのはいつでしょうか">マイクロコントローラを使うべきなのはいつでしょうか？</a></h2>
+<!-- 
+All these application I've mentioned, you can probably implement with a Raspberry Pi, a computer
+that runs Linux. Why should I bother with a microcontroller that operates without an OS? Sounds like
+it would be harder to develop a program.
+ -->
+<p>上述した全てのアプリケーションを、Linuxが動作するRaspberry Piで実装することは可能でしょう。
+わざわざOSなしで動作するマイクロコントローラを使うのはなぜでしょうか？
+プログラムを開発するのは、容易ではなさそうです。</p>
+<!-- 
+The main reason is cost. A microcontroller is much cheaper than a general purpose computer. Not only
+the microcontroller is cheaper; it also requires many fewer external electrical components to
+operate. This makes Printed Circuit Boards (PCB) smaller and cheaper to design and manufacture.
+ -->
+<p>主な理由はコストです。マイクロコントローラは、汎用コンピュータより非常に安価です。マイクロコントローラ自体が安いだけではないです。
+マイクロコントローラは、動作のための外部電気部品を少ししか必要としません。そのため、プリント基板（PCB）を小さく、安価に設計、製造できます。</p>
+<!-- 
+The other big reason is power consumption. A microcontroller consumes orders of magnitude less power
+than a full blown processor. If your application will run on batteries that makes a huge difference.
+ -->
+<p>他の大きな理由は、消費電力です。マイクロコントローラは、本格的なプロセッサよりも数桁少ない電力しか消費しません。
+アプリケーションがバッテリで動作するとき、この違いは大きいです。</p>
+<!-- 
+And last but not least: (hard) *real time* constraints. Some processes require their controllers to
+respond to some events within some time interval (e.g. a quadcopter/drone hit by a wind gust). If
+this *deadline* is not met, the process could end in catastrophic failure (e.g. the drone crashes to
+the ground). A general purpose computer  running a general purpose OS has many services running in
+the background. This makes it hard to guarantee execution of a program within tight time constraints.
+ -->
+<p>最後になりましたが、（ハード）<em>リアルタイム</em>制約があるためです。
+プロセスによっては、ある時間間隔以内にイベントに応答する必要があります（例えば、クアッドコプター/ドローンが突風に襲われた場合）。
+もし、<em>デッドライン</em>を満たさない場合、そのプロセスは悲惨な結末を迎えるでしょう（例えば、ドローンは地面に墜落します）。
+汎用OSを実行している汎用コンピュータは、背後で多くのサービスが動作しています。
+このことは、厳密な時間制約内でのプログラム実行の保証を難しくします。</p>
+<!-- ## When should I *not* use a microcontroller? -->
+<h2><a class="header" href="#マイクロコントローラを使うべきでない時はいつでしょうか" id="マイクロコントローラを使うべきでない時はいつでしょうか">マイクロコントローラを使うべきで<em>ない</em>時はいつでしょうか？</a></h2>
+<!-- 
+Where heavy computations are involved. To keep their power consumption low, microcontrollers have
+very limited computational resources available to them. For example, some microcontrollers don't
+even have hardware support for floating point operations. On those devices, performing a simple
+addition of single precision numbers can take hundreds of CPU cycles.
+ -->
+<p>計算量が膨大な場合です。消費電力を低くするため、マイクロコントローラは非常に限られた計算資源しか持っていません。
+例えば、マイクロコントローラによっては、浮動小数点演算のハードウェアすら搭載していません。
+そのようなデバイスでは、単精度の単純な加算でさえも、実行に数百CPUサイクルかかるでしょう。</p>
+<!-- ## Why use Rust and not C? -->
+<h2><a class="header" href="#cではなくrustを使う理由はなんでしょうか" id="cではなくrustを使う理由はなんでしょうか">CではなくRustを使う理由はなんでしょうか？</a></h2>
+<!-- 
+Hopefully, I don't need to convince you here as you are probably familiar with the language
+differences between Rust and C. One point I do want to bring up is package management. C lacks an
+official, widely accepted package management solution whereas Rust has Cargo. This makes development
+*much* easier. And, IMO, easy package management encourages code reuse because libraries can be
+easily integrated into an application which is also a good thing as libraries get more "battle
+testing".
+ -->
+<p>あなたはRustとCとの違いを知っており、ここで説得する必要がないことを願っています。
+あえて、1つ強調すると、それはパッケージ管理です。RustにはCargoがある一方、Cは公式の広く普及しているパッケージ管理システムがありません。
+Cargoは開発を<em>非常に</em>容易にします。私の意見としては、パッケージ管理が簡単であることは、コードの再利用を促進します。
+なぜなら、ライブラリがアプリケーションに容易に結合できるからです。このことは、ライブラリがより「実戦で使われる」ことにも良い影響があります。</p>
+<!-- ## Why should I not use Rust? -->
+<h2><a class="header" href="#rustを使うべきでない理由は何でしょうか" id="rustを使うべきでない理由は何でしょうか">Rustを使うべきでない理由は何でしょうか？</a></h2>
+<!-- Or why should I prefer C over Rust? -->
+<p>もしくは、RustよりCを選ぶ理由はなんでしょうか？</p>
+<!-- 
+The C ecosystem is way more mature. Off the shelf solution for several problems already exist. If
+you need to control a time sensitive process, you can grab one of the existing commercial Real Time
+Operating Systems (RTOS) out there and solve your problem. There are no commercial, production-grade
+RTOSes in Rust yet so you would have to either create one yourself or try one of the ones that are
+in development.
+ -->
+<p>Cのエコシステムはより成熟しています。いくつもの問題に対する解決策が既に存在しています。
+時間制約のあるプロセスを制御する必要がある場合、既存の商用リアルタイムOS（RTOS）を選び、問題を解決することができます。
+Rustにはまだ、商用で製品レベルのRTOSがないため、自分自身で作るか、開発中のものを試す必要があります。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../02-requirements/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../02-requirements/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
