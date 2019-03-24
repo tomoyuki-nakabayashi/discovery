@@ -1,4 +1,6 @@
-# What's left for you to explore
+<!-- # What's left for you to explore -->
+
+# もっと探検するために
 
 We have barely scratched the surface! There's lots of stuff left for you to explore:
 
